@@ -21,4 +21,4 @@ of your MediaWiki installation. If you got the zip archive, you will need to put
 into a directory called ShortDescription.
 
 ## Usage
-Please refer to the [extensions documentation page](https://www.mediawiki.org/wiki/Extension:ShortDescription)
+Please refer to the [extensions documentation page](https://www.mediawiki.org/wiki/Extension:ShortDescription).
