@@ -1,0 +1,28 @@
+{
+	"name": "mediawiki/short-description",
+	"type": "mediawiki-extension",
+	"description": "Adds the required magic word and API to mimic the short description provided by Wikibase on Wikimedia projects",
+	"keywords": [
+		"MediaWiki",
+		"ShortDescription",
+		"extension"
+	],
+	"homepage": "https://www.mediawiki.org/wiki/Extension:ShortDescription",
+	"readme": "README.md",
+	"license": "GPL-3.0",
+	"authors": [
+		{
+			"name": "alistair3149",
+			"email": "alistair31494322@gmail.com",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"forum": "https://www.mediawiki.org/wiki/Extension_talk:ShortDescription",
+		"wiki": "https://www.mediawiki.org/wiki/Extension:ShortDescription"
+	},
+	"require": {
+		"composer/installers": ">=1.0.1",
+		"mediawiki/mediawiki": ">=1.31.0"
+	},
+}
