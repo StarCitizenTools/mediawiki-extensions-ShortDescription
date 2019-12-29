@@ -39,7 +39,7 @@
 		],
 		"fix": [
 			"minus-x fix .",
-			"phpcbf --ignore_errors_on_exit"
+			"phpcbf"
 		]
 	}
 }
