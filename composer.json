@@ -22,8 +22,7 @@
 		"wiki": "https://www.mediawiki.org/wiki/Extension:ShortDescription"
 	},
 	"require": {
-		"composer/installers": ">=1.0.1",
-		"mediawiki/mediawiki": ">=1.31.0"
+		"composer/installers": ">=1.0.1"
 	},
 	"require-dev": {
 		"jakub-onderka/php-parallel-lint": "1.0.0",
