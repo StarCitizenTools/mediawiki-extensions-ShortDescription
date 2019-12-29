@@ -23,8 +23,11 @@ class ShortDescriptionHooks {
 		return true;
 	}
 
-	/*
+	/**
 	 * Render the output of {{GETSHORTDESC}}.
+	 *
+	 * @param Parser $parser
+	 * @return $output
 	 */
 	public static function rendershortdesc( Parser $parser ) {
 		$output = '';
