@@ -3,7 +3,10 @@
 class ShortDescriptionHooks {
 
 	/**
-	 * Register any render callbacks with the parser 
+	 * Register any render callbacks with the parser
+	 *
+	 * @param Parser $parser
+	 * @return true
 	 */
 	public static function onParserFirstCallInit( Parser $parser ) {
 		$parser->setFunctionHook(
@@ -26,7 +29,9 @@ class ShortDescriptionHooks {
 	public static function rendershortdesc( Parser $parser ) {
 		$output = '';
 
-		// Check if shortdesc exists, render if exist
+		/*
+		 * Check if shortdesc exists, render if exist
+		 */
 		$shortdescription = $parser->getOutput()->getProperty( 'shortdesc' );
 
 		if ( $shortdescription !== false ) {
