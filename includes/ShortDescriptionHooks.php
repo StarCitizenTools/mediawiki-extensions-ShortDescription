@@ -2,7 +2,9 @@
 
 class ShortDescriptionHooks {
 
-	/* Register any render callbacks with the parser */
+	/**
+	 * Register any render callbacks with the parser 
+	 */
 	public static function onParserFirstCallInit( Parser $parser ) {
 		$parser->setFunctionHook(
 			'shortdesc',
@@ -10,13 +12,17 @@ class ShortDescriptionHooks {
 			Parser::SFH_NO_HASH
 		);
 
-		/* Create a function hook associating the "getshortdesc" magic word with rendershortdesc() */
+		/*
+		 * Create a function hook associating the "getshortdesc" magic word with rendershortdesc()
+		 */
 		$parser->setFunctionHook( 'getshortdesc', [ self::class, 'rendershortdesc' ], Parser::SFH_NO_HASH );
 
 		return true;
 	}
 
-	/* Render the output of {{GETSHORTDESC}}. */
+	/*
+	 * Render the output of {{GETSHORTDESC}}.
+	 */
 	public static function rendershortdesc( Parser $parser ) {
 		$output = '';
 
@@ -30,18 +36,19 @@ class ShortDescriptionHooks {
 		return $output;
 	}
 
-   /**
-     * Extracted from WikiBase
-     * See T184000 for related info
+	/**
+	 * Extracted from WikiBase
+	 * See T184000 for related info
 	 */
-   /**
-	* Parser function callback
-	*
-	* @param Parser $parser
-	* @param string $shortDesc Short description of the current page, as plain text.
-	*
-	* @return string
-	*/
+
+	/**
+	 * Parser function callback
+	 *
+	 * @param Parser $parser
+	 * @param string $shortDesc Short description of the current page, as plain text.
+	 *
+	 * @return string
+	 */
 	public static function handle( Parser $parser, $shortDesc ) {
 		$handler = self::newFromGlobalState();
 		$handler->doHandle( $parser, $shortDesc );
