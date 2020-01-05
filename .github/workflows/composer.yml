@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
 
     - name: Validate composer.json and composer.lock
       run: composer validate
@@ -22,13 +22,26 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress --no-suggest
 
-    - name: Run Composer fix
-      run: composer fix
+    # Bypass the phpcbf non-standard exit code  
+    - name: Run composer fix
+      run: |
+        sh ./bin/phpcbf.sh
+        composer fix
 
     - name: Run Composer test
-      if: always()
       run: composer test
 
+    - name: Push the changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@users.noreply.github.com"
+        git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+        git add .
+        git commit -am "Github CI lint"
+        git push
+    
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 

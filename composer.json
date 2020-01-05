@@ -34,14 +34,11 @@
 	"scripts": {
 		"test": [
 			"parallel-lint . --exclude vendor --exclude node_modules",
-			"phpcs --config-set ignore_warnings_on_exit 1",
-			"phpcs --config-set ignore_errors_on_exit 1",
 			"phpcs -p -s",
 			"minus-x check ."
 		],
 		"fix": [
-			"minus-x fix .",
-			"phpcbf"
+			"minus-x fix ."
 		]
 	}
 }
