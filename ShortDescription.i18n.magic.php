@@ -1,6 +1,6 @@
 <?php
 /**
- * Magic word internationalisation for Description2 extension
+ * Magic word internationalisation for ShortDescription extension
  *
  * @file
  * @ingroup Extensions
