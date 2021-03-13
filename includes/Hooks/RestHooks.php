@@ -31,10 +31,6 @@ class RestHooks implements SearchResultProvideDescriptionHook {
 	/**
 	 * Look up descriptions for a set of pages.
 	 * @param Title[] $titles Titles to look up (will be loaded).
-	 * @param array|string $sources One or both of the DescriptionLookup::SOURCE_* constants.
-	 *   When an array is provided, the second element will be used as fallback.
-	 * @param null $actualSources Will be set to an associative array of page ID => SOURCE_*,
-	 *   indicating where each description came from, or null if no description was found.
 	 * @return string[] Associative array of page ID => description. Pages with no description
 	 *   will be omitted.
 	 */
@@ -70,6 +66,8 @@ class RestHooks implements SearchResultProvideDescriptionHook {
 
 	/**
 	 * Used to update Search Results with descriptions for Search Engine.
+	 * @param array	$pageIdentities	Array (string=>SearchResultPageIdentity) where key is pageId
+	 * @param array	&$descriptions	Output array (string=>string|null) where key is pageId and value is either a description for given page or null
 	 */
 	public function onSearchResultProvideDescription( 
 		array $pageIdentities,
