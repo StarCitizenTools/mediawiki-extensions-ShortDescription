@@ -6,7 +6,7 @@
 	],
 	"url": "https://www.mediawiki.org/wiki/Extension:ShortDescription",
 	"descriptionmsg": "shortdescription-desc",
-	"license-name": "GPL-3.0",
+	"license-name": "GPL-3.0-or-later",
 	"type": "api",
 	"requires": {
 		"MediaWiki": ">= 1.35.0"
