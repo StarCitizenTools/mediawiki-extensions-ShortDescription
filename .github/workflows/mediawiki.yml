@@ -31,10 +31,10 @@ jobs:
         composer fix
         composer test
 
-    - name: Check Javascript
-      run: |
-        npm run lint:fix:js
-        npm run lint:js
+    #- name: Check Javascript
+    #  run: |
+    #    npm run lint:fix:js
+    #    npm run lint:js
 
     - name: Check i18n
       run: |
