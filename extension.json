@@ -28,11 +28,15 @@
 		"ShortDescriptionMagic": "ShortDescription.i18n.magic.php"
 	},
 	"Hooks": {
-		"ParserFirstCallInit": "parser"
+		"ParserFirstCallInit": "parser",
+		"SearchResultProvideDescription": "rest"
 	},
 	"HookHandlers": {
 		"parser": {
 			"class": "MediaWiki\\Extension\\ShortDescription\\Hooks\\ParserHooks"
+		},
+		"rest": {
+			"class": "MediaWiki\\Extension\\ShortDescription\\Hooks\\RestHooks"
 		}
 	},
 	"type": "api"
