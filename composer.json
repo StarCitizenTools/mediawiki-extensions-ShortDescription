@@ -32,16 +32,14 @@
 		"php-parallel-lint/php-parallel-lint": "1.2.0"
 	},
 	"scripts": {
+		"fix": [
+			"minus-x fix ."
+		],
 		"test": [
 			"parallel-lint . --exclude vendor --exclude node_modules",
 			"phpcs --config-set ignore_warnings_on_exit 1",
-			"phpcs --config-set ignore_errors_on_exit 1",
 			"phpcs -p -s",
 			"minus-x check ."
-		],
-		"fix": [
-			"minus-x fix .",
-			"phpcbf"
 		],
 		"phan": "phan -d . --long-progress-bar"
 	}
