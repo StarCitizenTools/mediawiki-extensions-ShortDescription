@@ -17,7 +17,6 @@ use MediaWiki\Rest\Hook\SearchResultProvideDescriptionHook;
 use PageProps;
 use Title;
 
-
 class RestHooks implements SearchResultProvideDescriptionHook {
 
 	/**
@@ -67,9 +66,9 @@ class RestHooks implements SearchResultProvideDescriptionHook {
 	/**
 	 * Used to update Search Results with descriptions for Search Engine.
 	 * @param array	$pageIdentities	Array (string=>SearchResultPageIdentity) where key is pageId
-	 * @param array	&$descriptions	Output array (string=>string|null) where key is pageId and value is either a description for given page or null
+	 * @param array &$descriptions Output array (string=>string|null) where key is pageId and value is either a description for given page or null
 	 */
-	public function onSearchResultProvideDescription( 
+	public function onSearchResultProvideDescription(
 		array $pageIdentities,
 		&$descriptions
 	):void {
