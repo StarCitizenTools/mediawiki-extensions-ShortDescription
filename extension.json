@@ -5,6 +5,7 @@
 		"alistair3149"
 	],
 	"url": "https://www.mediawiki.org/wiki/Extension:ShortDescription",
+	"namemsg": "shortdescription",
 	"descriptionmsg": "shortdescription-desc",
 	"license-name": "GPL-3.0-or-later",
 	"type": "api",
@@ -23,7 +24,8 @@
 	},
 	"MessagesDirs": {
 		"ShortDescription": [
-			"i18n"
+			"i18n",
+			"i18n/api"
 		]
 	},
 	"Hooks": {
