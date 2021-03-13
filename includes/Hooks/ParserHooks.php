@@ -22,7 +22,7 @@ class ParserHooks implements ParserFirstCallInitHook {
 	 * @param Parser $parser
 	 * @return true
 	 */
-	public static function onParserFirstCallInit( Parser $parser ) {
+	public function onParserFirstCallInit( $parser ) {
 		$parser->setFunctionHook(
 			'shortdesc',
 			[ self::class, 'handle' ],

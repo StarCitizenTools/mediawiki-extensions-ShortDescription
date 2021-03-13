@@ -18,7 +18,7 @@
 			"i18n/api"
 		]
 	},
-	"AutoloadClasses": {
+	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\ShortDescription\\": "includes/"
 	},
 	"APIPropModules": {
