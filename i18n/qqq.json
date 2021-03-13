@@ -5,5 +5,6 @@
 		]
 	},
 	"shortdescription": "{{name}}",
-	"shortdescription-desc": "{{desc|name=Short Description|url=https://www.mediawiki.org/wiki/Extension:ShortDescription}}"
+	"shortdescription-desc": "{{desc|name=Short Description|url=https://www.mediawiki.org/wiki/Extension:ShortDescription}}",
+	"shortdescription-info-label": "Label for the short description field on the action=info page.\n\nSee [{{canonicalurl:w:Main Page|action=info}} example]."
 }
