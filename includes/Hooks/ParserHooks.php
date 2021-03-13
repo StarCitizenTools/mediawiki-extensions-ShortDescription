@@ -1,6 +1,20 @@
 <?php
+/**
+ * ShortDescription parser hooks
+ *
+ * @file
+ * @ingroup Extensions
+ * @license GPL-3.0-or-later
+ */
 
-class ShortDescriptionHooks {
+declare( strict_types=1 );
+
+namespace MediaWiki\Extension\ShortDescription\Hooks;
+
+use MediaWiki\Hook\ParserFirstCallInitHook;
+use Parser;
+
+class ParserHooks implements ParserFirstCallInitHook {
 
 	/**
 	 * Register any render callbacks with the parser

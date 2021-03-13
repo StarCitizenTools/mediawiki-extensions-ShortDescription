@@ -1,26 +1,16 @@
 {
 	"name": "ShortDescription",
+	"license-name": "GPL-3.0-or-later",
 	"version": "2.0.0",
+	"url": "https://www.mediawiki.org/wiki/Extension:ShortDescription",
 	"author": [
 		"alistair3149"
 	],
-	"url": "https://www.mediawiki.org/wiki/Extension:ShortDescription",
 	"namemsg": "shortdescription",
 	"descriptionmsg": "shortdescription-desc",
-	"license-name": "GPL-3.0-or-later",
-	"type": "api",
+	"manifest_version": 2,
 	"requires": {
 		"MediaWiki": ">= 1.35.0"
-	},
-	"APIPropModules": {
-		"description": "ApiQueryDescription"
-	},
-	"AutoloadClasses": {
-		"ApiQueryDescription": "includes/api/ApiQueryDescription.php",
-		"ShortDescriptionHooks": "includes/ShortDescriptionHooks.php"
-	},
-	"ExtensionMessagesFiles": {
-		"ShortDescriptionMagic": "ShortDescription.i18n.magic.php"
 	},
 	"MessagesDirs": {
 		"ShortDescription": [
@@ -28,8 +18,22 @@
 			"i18n/api"
 		]
 	},
-	"Hooks": {
-		"ParserFirstCallInit": "ShortDescriptionHooks::onParserFirstCallInit"
+	"AutoloadClasses": {
+		"MediaWiki\\Extension\\ShortDescription\\": "includes/"
 	},
-	"manifest_version": 2
+	"APIPropModules": {
+		"description": "MediaWiki\\Extension\\ShortDescription\\ApiQueryDescription"
+	},
+	"ExtensionMessagesFiles": {
+		"ShortDescriptionMagic": "ShortDescription.i18n.magic.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "parser"
+	},
+	"HookHandlers": {
+		"parser": {
+			"class": "MediaWiki\\Extension\\ShortDescription\\Hooks\\ParserHooks"
+		}
+	},
+	"type": "api"
 }
