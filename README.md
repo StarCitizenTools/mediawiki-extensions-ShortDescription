@@ -4,10 +4,11 @@ Extension:ShortDescription adds the required magic word and API to mimic the sho
 ## Features
 * Provide the exact same magic word {{SHORTDESC}} as Wikimedia projects, allowing you to define the description use on the page, which is being used by other Wikimedia extensions like RelatedArticles.
 * Add the same description API under query as Wikimedia projects
-* Provide a new magic word {{GETSHORTDESC}} for retrieving the short description on the same page 
+* Provide a new magic word {{GETSHORTDESC}} for retrieving the short description on the same page
+* Provide description for REST API search endpoint
 
 ## Requirements
-* [MediaWiki](https://www.mediawiki.org) 1.31 or later
+* [MediaWiki](https://www.mediawiki.org) 1.35 or later
 
 ## Installation
 You can get the extension via Git (specifying ShortDescription as the destination directory):
