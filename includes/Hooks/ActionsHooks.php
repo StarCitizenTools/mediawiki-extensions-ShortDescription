@@ -13,6 +13,7 @@ declare( strict_types=1 );
 namespace MediaWiki\Extension\ShortDescription\Hooks;
 
 use MediaWiki\Hook\InfoActionHook;
+use PageProps;
 use Title;
 
 class ActionsHooks implements InfoActionHook {
@@ -32,26 +33,10 @@ class ActionsHooks implements InfoActionHook {
 	public static function getShortDescription( Title $title ) {
 		$shortdescText = '';
 
-		// Do not query for special pages or other titles never in the database
-		if ( !$title->canExist() ) {
-			return false;
-		}
-
-		if ( !$title->exists() ) {
-			// No page id to select from
-			return false;
-		}
-
-		$dbr = wfGetDB( DB_REPLICA );
-		$shortdescText = $dbr->selectField( 'page_props',
-			'pp_value',
-			[
-				'pp_page' => $title->getArticleID(),
-				'pp_propname' => self::PROPERTY_NAME
-			],
-			__METHOD__,
-			[ 'ORDER BY' => 'pp_propname' ]
-		);
+		$shortdescText = implode( '', PageProps::getInstance()->getProperties(
+			$title,
+			self::PROPERTY_NAME
+		) );
 
 		return $shortdescText;
 	}
