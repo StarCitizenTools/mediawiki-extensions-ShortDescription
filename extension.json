@@ -1,7 +1,7 @@
 {
 	"name": "ShortDescription",
 	"license-name": "GPL-3.0-or-later",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"url": "https://www.mediawiki.org/wiki/Extension:ShortDescription",
 	"author": [
 		"alistair3149"
@@ -18,6 +18,18 @@
 			"i18n/api"
 		]
 	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "modules",
+		"remoteExtPath": "ShortDescription/modules"
+	},
+	"ResourceModules": {
+		"ext.shortDescription": {
+			"scripts": [
+				"ext.shortDescription.js"
+			],
+			"styles": "ext.shortDescription.less"
+		}
+	},
 	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\ShortDescription\\": "includes/"
 	},
@@ -28,6 +40,7 @@
 		"ShortDescriptionMagic": "ShortDescription.i18n.magic.php"
 	},
 	"Hooks": {
+		"BeforePageDisplay": "page",
 		"InfoAction": "actions",
 		"ParserFirstCallInit": "parser",
 		"SearchResultProvideDescription": "rest"
@@ -36,12 +49,18 @@
 		"actions": {
 			"class": "MediaWiki\\Extension\\ShortDescription\\Hooks\\ActionsHooks"
 		},
+		"page": {
+			"class": "MediaWiki\\Extension\\ShortDescription\\Hooks\\PageHooks"
+		},
 		"parser": {
 			"class": "MediaWiki\\Extension\\ShortDescription\\Hooks\\ParserHooks"
 		},
 		"rest": {
 			"class": "MediaWiki\\Extension\\ShortDescription\\Hooks\\RestHooks"
 		}
+	},
+	"ConfigRegistry": {
+		"shortdescription": "GlobalVarConfig::newInstance"
 	},
 	"type": "api"
 }
