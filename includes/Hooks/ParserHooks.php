@@ -129,6 +129,8 @@ class ParserHooks implements ParserFirstCallInitHook {
 		if ( $this->isValid( $shortDesc ) ) {
 			$out = $parser->getOutput();
 			$out->setProperty( 'shortdesc', $shortDesc );
+			// Supply description to MobileFrontend
+			$out->setProperty( 'wgMFDescription', $shortDesc );
 		}
 	}
 }
