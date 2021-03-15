@@ -20,14 +20,6 @@ use Title;
 class RestHooks implements SearchResultProvideDescriptionHook {
 
 	/**
-	 * page_props key.
-	 */
-	public const PROPERTY_NAME = 'shortdesc';
-
-	/** @var PageProps */
-	private $pageProps;
-
-	/**
 	 * Look up descriptions for a set of pages.
 	 * @param Title[] $titles Titles to look up (will be loaded).
 	 * @return string[] Associative array of page ID => description. Pages with no description
@@ -55,12 +47,10 @@ class RestHooks implements SearchResultProvideDescriptionHook {
 	 * @return string[] Associative array of page ID => description.
 	 */
 	private function getLocalDescriptions( array $titlesByPageId ) {
-		$pageProps = PageProps::getInstance();
-
 		if ( !$titlesByPageId ) {
 			return [];
 		}
-		return $pageProps->getProperties( $titlesByPageId, self::PROPERTY_NAME );
+		return HookUtils::getPageProps( $titlesByPageId );
 	}
 
 	/**
