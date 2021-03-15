@@ -14,7 +14,6 @@ namespace MediaWiki\Extension\ShortDescription\Hooks;
 
 use MediaWiki\Rest\Entity\SearchResultPageIdentity;
 use MediaWiki\Rest\Hook\SearchResultProvideDescriptionHook;
-use PageProps;
 use Title;
 
 class RestHooks implements SearchResultProvideDescriptionHook {

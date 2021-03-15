@@ -12,7 +12,7 @@ namespace MediaWiki\Extension\ShortDescription\Hooks;
 use PageProps;
 
 class HookUtils {
-	
+
 	/**
 	 * Page_props key for short description.
 	 */

@@ -18,7 +18,7 @@ class PageHooks implements BeforePageDisplayHook {
 	 * Add the required javascript to replace the tagline with shortdesc
 	 * @param OutputPage $out OutputPage
 	 * @param Skin $skin
-	 */	
+	 */
 	public function onBeforePageDisplay( $out, $skin ) : void {
 		$title = $out->getTitle();
 
