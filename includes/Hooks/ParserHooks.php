@@ -14,6 +14,7 @@ namespace MediaWiki\Extension\ShortDescription\Hooks;
 use MediaWiki\Hook\OutputPageParserOutputHook;
 use MediaWiki\Hook\ParserFirstCallInitHook;
 use Parser;
+use Title;
 
 class ParserHooks implements
 	OutputPageParserOutputHook,
@@ -62,14 +63,16 @@ class ParserHooks implements
 	 * Render the output of {{GETSHORTDESC}}.
 	 *
 	 * @param Parser $parser
-	 * @param Title $title
+	 * @param string $input
 	 * @return string
 	 */
-	public static function rendershortdesc( Parser $parser, $title = '' ) {
+	public static function rendershortdesc( Parser $parser, $input = '' ) {
 		$output = '';
 
 		// If no title is set then use current page
-		if ( !$title ) {
+		if ( $input ) {
+			$title = Title::newFromText( $input );
+		} else {
 			$title = $parser->getTitle();
 		}
 
