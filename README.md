@@ -1,11 +1,18 @@
-# Short Description for Mediawiki
-Extension:ShortDescription adds the required magic word and API to mimic the short description provided by Wikibase on Wikimedia projects.
+# Short Description
+![](https://github.com/StarCitizenTools/mediawiki-extensions-ShortDescription/workflows/MediaWiki%20CI/badge.svg)
+The Short Description extension allows wikis to add short descriptions to wikitext pages, simliar to the implementation on [Wikipedia](https://en.wikipedia.org/wiki/Wikipedia:Short_description) and Wikibase. On top of that, it replaces the site tagline with short description on pages with short description.
+
+[Extension:ShortDescription on MediaWiki](https://www.mediawiki.org/wiki/Extension:ShortDescription).
 
 ## Features
-* Provide the exact same magic word {{SHORTDESC}} as Wikimedia projects, allowing you to define the description use on the page, which is being used by other Wikimedia extensions like RelatedArticles.
-* Add the same description API under query as Wikimedia projects
-* Provide a new magic word {{GETSHORTDESC}} for retrieving the short description on the same page
-* Provide description for REST API search endpoint
+* Define short description on the page with the magic word `{{SHORTDESC}}`, same as the implementation on Wikipedia
+* Retrieve short description on any wiki pages with the magic word `{{GETSHORTDESC}}`
+* Add short description underneath the page title on most skins, if the skin supports site tagline (`#siteSub`)
+** Note that the short description with replace the default site tagline message on pages with short description
+** Does not apply to [Skin:Citizen](https://www.mediawiki.org/wiki/Skin:Citizen) and [Skin:Minerva Neue](https://www.mediawiki.org/wiki/Skin:Minerva_Neue), as they have native support
+* Allow short description to be accessed through the Action API
+* Provide description to the REST API search endpoint
+* Add short description to page information (`&action=info`)
 
 ## Requirements
 * [MediaWiki](https://www.mediawiki.org) 1.35 or later
@@ -22,4 +29,14 @@ of your MediaWiki installation. If you got the zip archive, you will need to put
 into a directory called ShortDescription.
 
 ## Usage
-Please refer to the [extensions documentation page](https://www.mediawiki.org/wiki/Extension:ShortDescription).
+### Add short description 
+To add `Bacon ipsum dolor amet turkey` as short description, simply add `{{SHORTDESC:Bacon ipsum dolor amet turkey}}` on the page.
+
+### Retrive short description on wikipage
+To retrive the short description on the page `Bacon`, simply add `{{GETSHORTDESC:Bacon}}` on the page. If you are retrieving the short description on the same page (e.g. getting the short description of `Bacon` on the `Bacon` page), simply add `{{GETSHORTDESC:}}`.
+
+### Retrieve short description through Action API
+The short description can be called through the `description` property in `query` action in the [Action API](https://www.mediawiki.org/wiki/API:Main_page) (e.g.`api.php?action=query&prop=description`). It is also accessible through the `shortdesc` property inside `pageprops`.
+
+### Retrieve short description through REST API
+The short description can be accessed through the `description` property in the [search endpoint](https://www.mediawiki.org/wiki/API:REST_API/Reference) in the [REST API](https://www.mediawiki.org/wiki/API:REST_API).
