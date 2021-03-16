@@ -17,7 +17,7 @@ use Parser;
 
 class ParserHooks implements
 	OutputPageParserOutputHook,
-	ParserFirstCallInitHook 
+	ParserFirstCallInitHook
 {
 	/**
 	 * Register property for extensions or skins to use in Outputpage
