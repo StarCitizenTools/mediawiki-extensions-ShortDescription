@@ -1,3 +1,4 @@
+![](https://upload.wikimedia.org/wikipedia/commons/0/08/Shortdescription-icon-ltr.svg)
 # Short Description
 ![](https://github.com/StarCitizenTools/mediawiki-extensions-ShortDescription/workflows/MediaWiki%20CI/badge.svg)
 
