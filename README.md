@@ -1,5 +1,6 @@
 # Short Description
 ![](https://github.com/StarCitizenTools/mediawiki-extensions-ShortDescription/workflows/MediaWiki%20CI/badge.svg)
+
 The Short Description extension allows wikis to add short descriptions to wikitext pages, simliar to the implementation on [Wikipedia](https://en.wikipedia.org/wiki/Wikipedia:Short_description) and Wikibase. On top of that, it replaces the site tagline with short description on pages with short description.
 
 [Extension:ShortDescription on MediaWiki](https://www.mediawiki.org/wiki/Extension:ShortDescription).
