@@ -62,6 +62,7 @@ class ParserHooks implements
 	 * Render the output of {{GETSHORTDESC}}.
 	 *
 	 * @param Parser $parser
+	 * @param Title $title
 	 * @return string
 	 */
 	public static function rendershortdesc( Parser $parser, $title = '' ) {
