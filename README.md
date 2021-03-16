@@ -22,9 +22,9 @@ The ShortDescription extension allows wikis to add short descriptions to wikitex
 ## Installation
 You can get the extension via Git (specifying ShortDescription as the destination directory):
 
-    git clone https://github.com/wikimedia/mediawiki-extensions-ShortDescription.git ShortDescription
+    git clone https://github.com/StarCitizenTools/mediawiki-extensions-ShortDescription.git ShortDescription
 
-Or [download it as zip archive](https://github.com/wikimedia/mediawiki-extensions-ShortDescription/archive/master.zip).
+Or [download it as zip archive](https://github.com/StarCitizenTools/mediawiki-extensions-ShortDescription/archive/master.zip).
 
 In either case, the "ShortDescription" extension should end up in the "extensions" directory 
 of your MediaWiki installation. If you got the zip archive, you will need to put it 
