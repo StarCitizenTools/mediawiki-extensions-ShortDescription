@@ -1,7 +1,7 @@
 {
 	"name": "ShortDescription",
 	"license-name": "GPL-3.0-or-later",
-	"version": "2.2.0",
+	"version": "2.3.0",
 	"url": "https://www.mediawiki.org/wiki/Extension:ShortDescription",
 	"author": [
 		"alistair3149"
@@ -42,6 +42,7 @@
 	"Hooks": {
 		"BeforePageDisplay": "page",
 		"InfoAction": "actions",
+		"OutputPageParserOutput": "parser",
 		"ParserFirstCallInit": "parser",
 		"SearchResultProvideDescription": "rest"
 	},

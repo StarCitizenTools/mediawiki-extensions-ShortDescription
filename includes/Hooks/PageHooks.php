@@ -14,6 +14,12 @@ namespace MediaWiki\Extension\ShortDescription\Hooks;
 use MediaWiki\Hook\BeforePageDisplayHook;
 
 class PageHooks implements BeforePageDisplayHook {
+
+	/**
+	 * List of skins that has native PHP support for short description
+	 */
+	private const NATIVE_SKINS = [ 'citizen', 'minerva' ];
+
 	/**
 	 * Add the required javascript to replace the tagline with shortdesc
 	 * @param OutputPage $out OutputPage
@@ -24,10 +30,13 @@ class PageHooks implements BeforePageDisplayHook {
 
 		// Load module if the page is suitable
 		if ( HookUtils::isAvailableForTitle( $title ) ) {
-			$out->addJsConfigVars( 'wgShortDesc', HookUtils::getShortDescription( $title ) );
-			$out->addModules( [
-				'ext.shortDescription'
-			] );
+			// Load module if the skin has no native support
+			if ( !in_array( $skin->getSkinName(), self::NATIVE_SKINS ) ) {
+				$out->addJsConfigVars( 'wgShortDesc', HookUtils::getShortDescription( $title ) );
+				$out->addModules( [
+					'ext.shortDescription'
+				] );
+			}
 		}
 	}
 }

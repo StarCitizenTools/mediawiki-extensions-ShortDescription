@@ -11,10 +11,27 @@ declare( strict_types=1 );
 
 namespace MediaWiki\Extension\ShortDescription\Hooks;
 
+use MediaWiki\Hook\OutputPageParserOutputHook;
 use MediaWiki\Hook\ParserFirstCallInitHook;
 use Parser;
 
-class ParserHooks implements ParserFirstCallInitHook {
+class ParserHooks implements
+	OutputPageParserOutputHook,
+	ParserFirstCallInitHook 
+{
+	/**
+	 * Register property for extensions or skins to use in Outputpage
+	 *
+	 * @param OutputPage $out
+	 * @param ParserOutput $parserOutput ParserOutput instance being added in $out
+	 */
+	public function onOutputPageParserOutput( $out, $parserOutput ) : void {
+		$shortDesc = $parserOutput->getProperty( 'shortdesc' );
+
+		$out->setProperty( 'shortdesc', $shortDesc );
+		// Supply description to Minerva
+		$out->setProperty( 'wgMFDescription', $shortDesc );
+	}
 
 	/**
 	 * Register any render callbacks with the parser
@@ -23,18 +40,18 @@ class ParserHooks implements ParserFirstCallInitHook {
 	 * @return true
 	 */
 	public function onParserFirstCallInit( $parser ) {
-		$parser->setFunctionHook(
-			'shortdesc',
-			[ self::class, 'handle' ],
-			Parser::SFH_NO_HASH
-		);
-
 		/*
 		 * Create a function hook associating the "getshortdesc" magic word with rendershortdesc()
 		 */
 		$parser->setFunctionHook(
 			'getshortdesc',
 			[ self::class, 'rendershortdesc' ],
+			Parser::SFH_NO_HASH
+		);
+
+		$parser->setFunctionHook(
+			'shortdesc',
+			[ self::class, 'handle' ],
 			Parser::SFH_NO_HASH
 		);
 
@@ -47,16 +64,18 @@ class ParserHooks implements ParserFirstCallInitHook {
 	 * @param Parser $parser
 	 * @return string
 	 */
-	public static function rendershortdesc( Parser $parser ) {
+	public static function rendershortdesc( Parser $parser, $title = '' ) {
 		$output = '';
 
-		/*
-		 * Check if shortdesc exists, render if exist
-		 */
-		$shortdescription = $parser->getOutput()->getProperty( 'shortdesc' );
+		// If no title is set then use current page
+		if ( !$title ) {
+			$title = $parser->getTitle();
+		}
 
-		if ( $shortdescription !== false ) {
-			$output = $shortdescription;
+		// Check if shortdesc exists, render if exist
+		$shortDesc = HookUtils::getShortDescription( $title );
+		if ( $shortDesc !== false ) {
+			$output = $shortDesc;
 		}
 
 		return $output;
@@ -129,8 +148,6 @@ class ParserHooks implements ParserFirstCallInitHook {
 		if ( $this->isValid( $shortDesc ) ) {
 			$out = $parser->getOutput();
 			$out->setProperty( 'shortdesc', $shortDesc );
-			// Supply description to MobileFrontend
-			$out->setProperty( 'wgMFDescription', $shortDesc );
 		}
 	}
 }
