@@ -9,8 +9,8 @@ The Short Description extension allows wikis to add short descriptions to wikite
 * Define short description on the page with the magic word `{{SHORTDESC}}`, same as the implementation on Wikipedia
 * Retrieve short description on any wiki pages with the magic word `{{GETSHORTDESC}}`
 * Add short description underneath the page title on most skins, if the skin supports site tagline (`#siteSub`)
-** Note that the short description with replace the default site tagline message on pages with short description
-** Does not apply to [Skin:Citizen](https://www.mediawiki.org/wiki/Skin:Citizen) and [Skin:Minerva Neue](https://www.mediawiki.org/wiki/Skin:Minerva_Neue), as they have native support
+  * Note that the short description with replace the default site tagline message on pages with short description
+  * Does not apply to [Skin:Citizen](https://www.mediawiki.org/wiki/Skin:Citizen) and [Skin:Minerva Neue](https://www.mediawiki.org/wiki/Skin:Minerva_Neue), as they have native support
 * Allow short description to be accessed through the Action API
 * Provide description to the REST API search endpoint
 * Add short description to page information (`&action=info`)
