@@ -4,7 +4,7 @@
 			"alistair3149"
 		]
 	},
-	"shortdescription": "ShortDescription",
-	"shortdescription-desc": "Adds the required magic word and API to mimic the short description provided by Wikibase on Wikimedia projects.",
+	"shortdescription": "Short Description",
+	"shortdescription-desc": "Allows wikis to add short descriptions to wikitext pages",
 	"shortdescription-info-label": "Short description"
 }
