@@ -20,7 +20,7 @@ class HookUtils {
 
 	/**
 	 * Returns pageprops array for short description
-	 * @param Title $title Title to get page image for
+	 * @param Title $title Title to get short description for
 	 * @return array PageProps for short description
 	 */
 	public static function getPageProps( $title ) {
@@ -29,7 +29,7 @@ class HookUtils {
 
 	/**
 	 * Returns short description for a given title
-	 * @param Title $title Title to get page image for
+	 * @param Title $title Title to get short description for
 	 * @return string short description
 	 */
 	public static function getShortDescription( $title ) {
