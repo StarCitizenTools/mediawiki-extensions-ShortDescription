@@ -29,7 +29,7 @@ class PageHooks implements BeforePageDisplayHook {
 		$title = $out->getTitle();
 
 		// Return if tagline is not enabled
-		if ( !HookUtils::getConfig( 'ShortDescriptionEnableTagline') ) {
+		if ( !HookUtils::getConfig( 'ShortDescriptionEnableTagline' ) ) {
 			return;
 		}
 

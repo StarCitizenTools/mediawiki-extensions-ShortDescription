@@ -30,10 +30,10 @@ class ParserHooks implements
 		$shortDesc = $parserOutput->getProperty( 'shortdesc' );
 
 		// Return if tagline is not enabled
-		if ( !HookUtils::getConfig( 'ShortDescriptionEnableTagline') ) {
+		if ( !HookUtils::getConfig( 'ShortDescriptionEnableTagline' ) ) {
 			return;
 		}
-		
+
 		$out->setProperty( 'shortdesc', $shortDesc );
 		// Supply description to Minerva
 		$out->setProperty( 'wgMFDescription', $shortDesc );
