@@ -1,7 +1,7 @@
 {
 	"name": "ShortDescription",
 	"license-name": "GPL-3.0-or-later",
-	"version": "2.3.0",
+	"version": "2.3.1",
 	"url": "https://www.mediawiki.org/wiki/Extension:ShortDescription",
 	"author": [
 		"alistair3149"
@@ -40,6 +40,7 @@
 		"ShortDescriptionMagic": "ShortDescription.i18n.magic.php"
 	},
 	"Hooks": {
+		"ApiOpenSearchSuggest": "api",
 		"BeforePageDisplay": "page",
 		"InfoAction": "actions",
 		"OutputPageParserOutput": "parser",
@@ -49,6 +50,9 @@
 	"HookHandlers": {
 		"actions": {
 			"class": "MediaWiki\\Extension\\ShortDescription\\Hooks\\ActionsHooks"
+		},
+		"api": {
+			"class": "MediaWiki\\Extension\\ShortDescription\\Hooks\\ApiHooks"
 		},
 		"page": {
 			"class": "MediaWiki\\Extension\\ShortDescription\\Hooks\\PageHooks"
@@ -63,7 +67,11 @@
 	"config": {
 		"ShortDescriptionEnableTagline": {
 			"value": true,
-			"description": "Enable ShortDescription in site tagline."
+			"description": "Enable short description in site tagline."
+		},
+		"ShortDescriptionExtendOpenSearchXml": {
+			"value": false,
+			"description": "Provide short description to the Opensearch API module."
 		}
 	},
 	"ConfigRegistry": {

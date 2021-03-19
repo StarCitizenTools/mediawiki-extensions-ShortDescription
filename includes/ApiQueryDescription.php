@@ -49,33 +49,21 @@ class ApiQueryDescription extends ApiQueryBase {
 		}
 		$titlesByPageId = array_slice( $titlesByPageId, $continue, $limit, true );
 
-		$localDescriptionsByPageId = $this->getLocalDescriptions( $titlesByPageId );
+		$descriptionsByPageId = Hooks\HookUtils::getDescriptionsByPageId( $titlesByPageId );
 
 		$this->addDataToResponse( array_keys( $titlesByPageId ),
-			$localDescriptionsByPageId, $continue );
-	}
-
-	/**
-	 * @param Title[] $titlesByPageId
-	 *
-	 * @return string[] Associative array of page ID => description.
-	 */
-	private function getLocalDescriptions( array $titlesByPageId ) {
-		if ( !$titlesByPageId ) {
-			return [];
-		}
-		return PageProps::getInstance()->getProperties( $titlesByPageId, 'shortdesc' );
+			$descriptionsByPageId, $continue );
 	}
 
 	/**
 	 * @param int[] $pageIds Page IDs, in the same order as returned by the ApiPageSet.
-	 * @param string[] $localDescriptionsByPageId Descriptions from local wikitext, as an
+	 * @param string[] $descriptionsByPageId Descriptions from wikitext, as an
 	 *   associative array of page ID
 	 * @param int $continue The API request is being continued from this position.
 	 */
 	private function addDataToResponse(
 		array $pageIds,
-		array $localDescriptionsByPageId,
+		array $descriptionsByPageId,
 		$continue
 	) {
 		$result = $this->getResult();
@@ -83,8 +71,8 @@ class ApiQueryDescription extends ApiQueryBase {
 		$fit = true;
 		foreach ( $pageIds as $pageId ) {
 			$path = [ 'query', 'pages', $pageId ];
-			if ( array_key_exists( $pageId, $localDescriptionsByPageId ) ) {
-				$fit = $result->addValue( $path, 'description', $localDescriptionsByPageId[$pageId] );
+			if ( array_key_exists( $pageId, $descriptionsByPageId ) ) {
+				$fit = $result->addValue( $path, 'description', $descriptionsByPageId[$pageId] );
 			}
 			if ( !$fit ) {
 				$this->setContinueEnumParameter( 'continue', $continue + $i );

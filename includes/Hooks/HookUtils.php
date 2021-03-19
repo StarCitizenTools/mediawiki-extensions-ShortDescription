@@ -39,6 +39,18 @@ class HookUtils {
 	}
 
 	/**
+	 * Look up descriptions (stored in the page wikitext via parser function) for a set of pages.
+	 * @param Title[] $titlesByPageId Associative array of page ID => Title object.
+	 * @return string[] Associative array of page ID => description.
+	 */
+	public static function getDescriptionsByPageId( array $titlesByPageId ) {
+		if ( !$titlesByPageId ) {
+			return [];
+		}
+		return self::getPageProps( $titlesByPageId );
+	}
+
+	/**
 	 * Check if the short description are available for a given title
 	 * @param Title $title
 	 * @return bool

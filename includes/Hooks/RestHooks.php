@@ -31,7 +31,7 @@ class RestHooks implements SearchResultProvideDescriptionHook {
 		$titlesByPageId = array_combine( $pageIds, $titles );
 
 		$descriptions = [];
-		$descriptions += $this->getLocalDescriptions( $titlesByPageId );
+		$descriptions += HookUtils::getDescriptionsByPageId( $titlesByPageId );
 
 		// Restore original sort order.
 		$pageIds = array_intersect( $pageIds, array_keys( $descriptions ) );
