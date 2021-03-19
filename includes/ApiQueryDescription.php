@@ -4,7 +4,6 @@ namespace MediaWiki\Extension\ShortDescription;
 
 use ApiQuery;
 use ApiQueryBase;
-use PageProps;
 
 /**
  * Extracted from WikiBase
