@@ -29,6 +29,11 @@ class ParserHooks implements
 	public function onOutputPageParserOutput( $out, $parserOutput ) : void {
 		$shortDesc = $parserOutput->getProperty( 'shortdesc' );
 
+		// Return if tagline is not enabled
+		if ( !HookUtils::getConfig( 'ShortDescriptionEnableTagline') ) {
+			return;
+		}
+		
 		$out->setProperty( 'shortdesc', $shortDesc );
 		// Supply description to Minerva
 		$out->setProperty( 'wgMFDescription', $shortDesc );

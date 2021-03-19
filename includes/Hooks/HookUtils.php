@@ -9,6 +9,7 @@
 
 namespace MediaWiki\Extension\ShortDescription\Hooks;
 
+use MediaWiki\MediaWikiServices;
 use PageProps;
 
 class HookUtils {
@@ -50,5 +51,17 @@ class HookUtils {
 		$hasShortdesc = isset( self::getPageProps( $title )[ $title->getArticleId() ] );
 
 		return $hasShortdesc;
+	}
+
+	/**
+	 * Returns ShortDescription config value
+	 * @param string $name config name
+	 * @return string config value
+	 */
+	public static function getConfig( $name ) {
+		$config = MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'shortdescription' );
+		$configValue = $config->get( $name );
+
+		return $configValue;
 	}
 }

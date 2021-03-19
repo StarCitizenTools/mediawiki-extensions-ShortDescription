@@ -30,6 +30,14 @@ In either case, the "ShortDescription" extension should end up in the "extension
 of your MediaWiki installation. If you got the zip archive, you will need to put it 
 into a directory called ShortDescription.
 
+## Configurations
+**The extension works out of the box without any configurations.** 
+The config flags allow more customization on the specific features in the extension. 
+
+Name | Description | Values | Default
+:--- | :--- | :--- | :---
+`$wgShortDescriptionEnableTagline` | Enables short descritption in site tagline | `true` - enable; `false` - disable | `true`
+
 ## Usage
 ### Add short description 
 To add `Bacon ipsum dolor amet turkey` as short description, simply add `{{SHORTDESC:Bacon ipsum dolor amet turkey}}` on the page.

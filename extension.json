@@ -60,6 +60,12 @@
 			"class": "MediaWiki\\Extension\\ShortDescription\\Hooks\\RestHooks"
 		}
 	},
+	"config": {
+		"ShortDescriptionEnableTagline": {
+			"value": true,
+			"description": "Enable ShortDescription in site tagline."
+		}
+	},
 	"ConfigRegistry": {
 		"shortdescription": "GlobalVarConfig::newInstance"
 	},

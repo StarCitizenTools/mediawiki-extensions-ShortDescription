@@ -28,6 +28,11 @@ class PageHooks implements BeforePageDisplayHook {
 	public function onBeforePageDisplay( $out, $skin ) : void {
 		$title = $out->getTitle();
 
+		// Return if tagline is not enabled
+		if ( !HookUtils::getConfig( 'ShortDescriptionEnableTagline') ) {
+			return;
+		}
+
 		// Load module if the page is suitable
 		if ( HookUtils::isAvailableForTitle( $title ) ) {
 			// Load module if the skin has no native support
