@@ -15,6 +15,7 @@ The ShortDescription extension allows wikis to add short descriptions to wikitex
 * Allow short description to be accessed through the Action API
 * Provide description to the REST API search endpoint
 * Add short description to page information (`&action=info`)
+* Provide description for extensions such as MobileFrontend, RelatedArticles
 
 ## Requirements
 * [MediaWiki](https://www.mediawiki.org) 1.35 or later
