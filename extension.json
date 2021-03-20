@@ -1,14 +1,14 @@
 {
 	"name": "ShortDescription",
 	"license-name": "GPL-3.0-or-later",
-	"version": "2.3.1",
+	"version": "2.3.2",
 	"url": "https://www.mediawiki.org/wiki/Extension:ShortDescription",
 	"author": [
 		"alistair3149"
 	],
 	"namemsg": "shortdescription",
 	"descriptionmsg": "shortdescription-desc",
-	"manifest_version": 2,
+	"type": "api",
 	"requires": {
 		"MediaWiki": ">= 1.35.0"
 	},
@@ -77,5 +77,5 @@
 	"ConfigRegistry": {
 		"shortdescription": "GlobalVarConfig::newInstance"
 	},
-	"type": "api"
+	"manifest_version": 2,
 }
