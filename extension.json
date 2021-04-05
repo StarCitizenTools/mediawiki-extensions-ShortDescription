@@ -18,6 +18,9 @@
 			"i18n/api"
 		]
 	},
+	"ExtensionMessagesFiles": {
+		"ShortDescriptionMagic": "ShortDescription.i18n.magic.php"
+	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "modules",
 		"remoteExtPath": "ShortDescription/modules"
