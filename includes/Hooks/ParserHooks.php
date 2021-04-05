@@ -46,17 +46,14 @@ class ParserHooks implements
 	 * @return true
 	 */
 	public function onParserFirstCallInit( $parser ) {
-		/*
-		 * Create a function hook associating the "getshortdesc" magic word with rendershortdesc()
-		 */
 		$parser->setFunctionHook(
-			'getshortdesc',
+			'MAG_GETSHORTDESC',
 			[ self::class, 'rendershortdesc' ],
 			Parser::SFH_NO_HASH
 		);
 
 		$parser->setFunctionHook(
-			'shortdesc',
+			'MAG_SHORTDESC',
 			[ self::class, 'handle' ],
 			Parser::SFH_NO_HASH
 		);
