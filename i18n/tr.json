@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hedda"
+		]
+	},
+	"shortdescription": "KısaAçıklama",
+	"shortdescription-desc": "Vikilerin, viki-metni sayfalarına kısa açıklamalar eklemesine izin verir",
+	"shortdescription-info-label": "Kısa açıklama"
+}

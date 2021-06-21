@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"ديفيد"
+		]
+	},
+	"apihelp-query+description-summary": "الحصول على وصف موجز للمفردات المصاحبة يوضح العنوان المستهدف للصفحة المستهدفة.",
+	"apihelp-query+description-example": "احصل على وصف لصفحة 'لندن'."
+}

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80"
+		]
+	},
+	"apihelp-query+description-summary": "קבלת תיאור קצר, כלומר כותרת־משנה שמסבירה במה עוסק דף היעד.",
+	"apihelp-query+description-example": "קבלת התיאור של הדף 'London'."
+}

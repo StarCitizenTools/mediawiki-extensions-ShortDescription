@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sabelöga"
+		]
+	},
+	"shortdescription": "KortBeskrivning",
+	"shortdescription-desc": "Låter wikier lägga till korta beskrivningar av wikitext-sidor.",
+	"shortdescription-info-label": "Kort beskrivning"
+}

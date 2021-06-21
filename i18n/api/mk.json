@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"apihelp-query+description-summary": "Дај краток опис (т.е. поднаслов) кој објаснува на што се однесува целната страница",
+	"apihelp-query+description-example": "Дај опис за страницата „Лондон“."
+}

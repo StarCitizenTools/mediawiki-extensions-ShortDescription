@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Besnik b"
+		]
+	},
+	"apihelp-query+description-summary": "Merrni një përshkrim të shkurtër, i njohur edhe si nëntitull, që shpjegon se për çfarë është faqja në fjalë.",
+	"apihelp-query+description-example": "Merrni përshkrimin për faqen 'London'."
+}

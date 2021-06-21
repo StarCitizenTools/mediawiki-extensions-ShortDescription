@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Danmichaelo",
+			"Jon Harald Søby"
+		]
+	},
+	"apihelp-query+description-summary": "Få en kort beskrivelse, også kalt undertittel, som forklarer hva målsiden handler om.",
+	"apihelp-query+description-example": "Hent beskrivelse for siden «London»."
+}

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"apihelp-query+description-summary": "Recibir una descripción curtia (subtítulu) esplicando'l tema de la páxina destín.",
+	"apihelp-query+description-example": "Recibir la descripcion de la páxina 'London'."
+}

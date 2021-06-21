@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wladek92"
+		]
+	},
+	"apihelp-query+description-summary": "Obtenez une brève description sous-titre a.k.a expliquant ce qu'est la page cible.",
+	"apihelp-query+description-example": "Obtenir la description de la page 'London'."
+}

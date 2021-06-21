@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Metalhead64"
+		]
+	},
+	"apihelp-query+description-summary": "Ruft eine Kurzbeschreibung a.k.a. einen Untertitel ab, der erklärt, über was die Zielseite handelt.",
+	"apihelp-query+description-example": "Ruft die Beschreibung für die Seite „London“ ab."
+}

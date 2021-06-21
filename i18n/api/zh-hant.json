@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kly"
+		]
+	},
+	"apihelp-query+description-summary": "取得解釋目標頁面相關內容的簡短描述（即子標題）。",
+	"apihelp-query+description-example": "取得頁面「London」的描述。"
+}

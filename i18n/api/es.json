@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dgstranz",
+			"Fitoschido"
+		]
+	},
+	"apihelp-query+description-summary": "Obtener una descripción breve o subtítulo que explica el tema de la página de destino.",
+	"apihelp-query+description-example": "Obtener la descripción de la página «Londres»."
+}

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Piramidion"
+		]
+	},
+	"apihelp-query+description-summary": "Отримати короткий опис (підзаголовок), який пояснює, про що йдеться в цільовій сторінці.",
+	"apihelp-query+description-example": "Отримати опис для сторінки «London»."
+}

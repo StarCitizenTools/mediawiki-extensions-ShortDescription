@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ilimanaq29",
+			"Walter Klosse"
+		]
+	},
+	"apihelp-query+description-summary": "Získat krátký popis a.k.a. popisku, který popisuje, o čem je cílová stránka.",
+	"apihelp-query+description-example": "Získat popis stránky 'London'."
+}

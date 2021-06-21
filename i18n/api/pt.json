@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu"
+		]
+	},
+	"apihelp-query+description-summary": "Obter uma descrição breve, isto é, um subtítulo que explica o objetivo da página de destino.",
+	"apihelp-query+description-example": "Obter a descrição para a página 'London'."
+}

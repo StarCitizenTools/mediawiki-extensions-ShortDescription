@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gomoko"
+		]
+	},
+	"shortdescription": "ShortDescription",
+	"shortdescription-desc": "Permet aux wikis d’ajouter des descriptions courtes aux pages wikitexte",
+	"shortdescription-info-label": "Description courte"
+}

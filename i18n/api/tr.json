@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK"
+		]
+	},
+	"apihelp-query+description-summary": "Hedef sayfanın ne hakkında olduğunu açıklayan kısa bir açıklama altyazısı edinin.",
+	"apihelp-query+description-example": "'London' sayfası için açıklama alın."
+}

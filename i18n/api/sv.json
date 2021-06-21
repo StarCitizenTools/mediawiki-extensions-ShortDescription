@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sabelöga",
+			"WikiPhoenix"
+		]
+	},
+	"apihelp-query+description-summary": "Få en kort beskrivning, även kallad undertitel, som förklarar vad målsidan handlar om.",
+	"apihelp-query+description-example": "Hämta beskrivningen för sidan \"London\"."
+}

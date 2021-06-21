@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226",
+			"Shizhao"
+		]
+	},
+	"apihelp-query+description-summary": "获得一个简短的描述（或称副标题），用来解释目标页面的内容。",
+	"apihelp-query+description-example": "获取页面“London”的描述。"
+}
