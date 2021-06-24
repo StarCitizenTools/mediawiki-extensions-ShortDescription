@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Anthonymodec"
+			"Anthonymodec",
+			"Hunpatinjob"
 		]
 	},
+	"shortdescription": "Apajle gli",
+	"shortdescription-desc": "Dike wikis niyi apajle gli dogona wikitext sin wenukunme le",
 	"shortdescription-info-label": "Apajle he whegli"
 }
