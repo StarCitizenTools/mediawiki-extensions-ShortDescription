@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tahmid"
+		]
+	},
+	"apihelp-query+description-summary": "লক্ষ্য পাতা কী সম্পর্কিত তা বিশ্লেষণ করে একটি সংক্ষিপ্ত বিবরণ ওরফে সাবটাইটেল পান।",
+	"apihelp-query+description-example": "'লন্ডন' পাতার সংক্ষিপ্ত বিবরণ পান।"
+}
