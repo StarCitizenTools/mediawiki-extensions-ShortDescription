@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"DDPAT"
+		]
+	},
+	"shortdescription": "ShortDescription",
+	"shortdescription-desc": "Дозволяє вікі додавати короткі описи до сторінок вікітексту",
+	"shortdescription-info-label": "Короткий опис"
+}
