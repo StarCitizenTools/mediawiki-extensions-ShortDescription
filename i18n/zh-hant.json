@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kly"
+		]
+	},
+	"shortdescription": "ShortDescription",
+	"shortdescription-desc": "允許 wiki 添加簡短描述到 wiki 代碼頁面",
+	"shortdescription-info-label": "簡短描述"
+}
