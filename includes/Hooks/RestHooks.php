@@ -62,7 +62,7 @@ class RestHooks implements SearchResultProvideDescriptionHook {
 		array $pageIdentities,
 		&$descriptions
 	):void {
-		$pageIdTitles = array_map( function ( SearchResultPageIdentity $identity ) {
+		$pageIdTitles = array_map( function ( $identity ) {
 			return Title::makeTitle( $identity->getNamespace(), $identity->getDBkey() );
 		}, $pageIdentities );
 
