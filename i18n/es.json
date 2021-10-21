@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Jackiezelaya"
+			"Jackiezelaya",
+			"Jakeukalane"
 		]
 	},
 	"shortdescription": "Breve descripción",
-	"shortdescription-desc": "Permite a los wikis agregar descripciones breves a las páginas de wikitexto.",
+	"shortdescription-desc": "Permite a las wikis agregar descripciones breves a las páginas de wikitexto.",
 	"shortdescription-info-label": "Mostrar descripcion"
 }

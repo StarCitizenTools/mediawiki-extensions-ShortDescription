@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"apihelp-query+description-summary": "Obtener un curte description, alias subtitulo, que explica le subjecto del pagina de destination.",
+	"apihelp-query+description-example": "Obtener le description del pagina 'London'."
+}
