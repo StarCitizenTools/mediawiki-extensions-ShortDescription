@@ -4,5 +4,6 @@
 			"Ykhwong"
 		]
 	},
+	"apihelp-query+description-summary": "대상 문서가 무엇인지를 설명하는 짧은 설명, 즉 부제를 가져옵니다.",
 	"apihelp-query+description-example": "'London' 문서의 설명을 가져옵니다."
 }
