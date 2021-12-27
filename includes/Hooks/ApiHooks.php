@@ -22,7 +22,7 @@ class ApiHooks implements ApiOpenSearchSuggestHook {
 	 * ApiOpenSearchSuggest hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ApiOpenSearchSuggest
 	 *
-	 * @param array &$results Array of search results
+	 * @param array $results Array of search results
 	 */
 	public function onApiOpenSearchSuggest( &$results ) {
 		if ( !HookUtils::getConfig( 'ShortDescriptionExtendOpenSearchXml' ) || !count( $results ) ) {

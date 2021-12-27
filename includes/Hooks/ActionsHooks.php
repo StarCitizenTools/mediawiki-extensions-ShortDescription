@@ -21,7 +21,7 @@ class ActionsHooks implements InfoActionHook {
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/InfoAction
 	 *
 	 * @param IContextSource $context Context, used to extract the title of the page
-	 * @param array[] &$pageInfo Auxillary information about the page.
+	 * @param array[] $pageInfo Auxillary information about the page.
 	 */
 	public function onInfoAction( $context, &$pageInfo ) {
 		$shortdesc = HookUtils::getShortDescription( $context->getTitle() );
