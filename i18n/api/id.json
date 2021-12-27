@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Daud I.F. Argana"
+		]
+	},
+	"apihelp-query+description-summary": "Mendapatkan deskripsi singkat alias takarir yang menjelaskan apa yang dibahas oleh halaman tujuan.",
+	"apihelp-query+description-example": "Mendapatkan deskripsi tentang halaman 'London'."
+}
