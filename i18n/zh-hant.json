@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kly"
+			"Kly",
+			"Tranve"
 		]
 	},
 	"shortdescription": "ShortDescription",
-	"shortdescription-desc": "允許 wiki 添加簡短描述到 wiki 代碼頁面",
+	"shortdescription-desc": "允許 wiki 添加簡短描述到 wikitext 頁面",
 	"shortdescription-info-label": "簡短描述"
 }
