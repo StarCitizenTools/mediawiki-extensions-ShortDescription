@@ -7,7 +7,7 @@ function main() {
 		// Wikipedia uses shortdescription class
 		// Added for gadgets and extension compatibility
 		tagline.classList.add( 'ext-shortdesc', 'shortdescription' );
-		tagline.innerHTML = shortdesc;
+		tagline.innerHTML = mw.html.escape( shortdesc );
 	}
 }
 

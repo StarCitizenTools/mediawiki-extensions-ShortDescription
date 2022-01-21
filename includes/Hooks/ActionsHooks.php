@@ -32,7 +32,7 @@ class ActionsHooks implements InfoActionHook {
 
 		$pageInfo['header-basic'][] = [
 			$context->msg( 'shortdescription-info-label' ),
-			$shortdesc
+			htmlspecialchars( $shortdesc )
 		];
 	}
 }
