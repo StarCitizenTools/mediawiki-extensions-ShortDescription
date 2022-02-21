@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chaduvari"
+		]
+	},
+	"apihelp-query+description-summary": "లక్ష్యిత పేజీ దేని గురించి అనేది చెప్పే ఒక క్లుప్త వివరణను, అంటే ఒక ఉపశీర్షికను, తెండి.",
+	"apihelp-query+description-example": "లండన్ అనే పేజీకి వివరణను తెండి."
+}
