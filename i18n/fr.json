@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gomoko"
+			"Gomoko",
+			"Verdy p"
 		]
 	},
 	"shortdescription": "ShortDescription",
-	"shortdescription-desc": "Permet aux wikis d’ajouter des descriptions courtes aux pages wikitexte",
+	"shortdescription-desc": "Permet aux wikis d’ajouter des descriptions courtes aux pages en wikicode",
 	"shortdescription-info-label": "Description courte"
 }
