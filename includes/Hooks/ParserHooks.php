@@ -160,8 +160,15 @@ class ParserHooks implements
 	public function doHandle( Parser $parser, $shortDesc ) {
 		$shortDesc = $this->sanitize( $shortDesc );
 		if ( $this->isValid( $shortDesc ) ) {
-			$out = $parser->getOutput();
-			$out->setProperty( 'shortdesc', $shortDesc );
+			$parserOutput = $parser->getOutput();
+			// TODO: Remove when we bump requirements
+			if ( method_exists( ParserOutput::class, 'setPageProperty' ) ) {
+				// ParserOutput::setPageProperty is avaliable since MW 1.38
+				$parserOutput->setPageProperty( 'shortdesc', $shortDesc );
+			} else {
+				// ParserOutput::setProperty is deprecated in MW 1.38
+				$parserOutput->setProperty( 'shortdesc', $shortDesc );
+			}
 		}
 	}
 }
