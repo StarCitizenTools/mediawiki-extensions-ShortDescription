@@ -14,6 +14,7 @@ namespace MediaWiki\Extension\ShortDescription\Hooks;
 use MediaWiki\Hook\OutputPageParserOutputHook;
 use MediaWiki\Hook\ParserFirstCallInitHook;
 use Parser;
+use ParserOutput;
 use Title;
 
 class ParserHooks implements
@@ -27,7 +28,14 @@ class ParserHooks implements
 	 * @param ParserOutput $parserOutput ParserOutput instance being added in $out
 	 */
 	public function onOutputPageParserOutput( $out, $parserOutput ) : void {
-		$shortDesc = $parserOutput->getProperty( 'shortdesc' );
+		// TODO: Remove when we bump requirements
+		if ( method_exists( ParserOutput::class, 'getPageProperty' ) ) {
+			// ParserOutput::getPageProperty is avaliable since MW 1.38
+			$shortDesc = $parserOutput-> getPageProperty( 'shortdesc' );
+		} else {
+			// ParserOutput::getProperty is deprecated in MW 1.38
+			$shortDesc = $parserOutput->getProperty( 'shortdesc' );
+		}
 
 		// Return if tagline is not enabled
 		if ( !HookUtils::getConfig( 'ShortDescriptionEnableTagline' ) ) {

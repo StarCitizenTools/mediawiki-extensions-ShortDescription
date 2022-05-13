@@ -25,7 +25,14 @@ class HookUtils {
 	 * @return array PageProps for short description
 	 */
 	public static function getPageProps( $title ) {
-		return PageProps::getInstance()->getProperties( $title, self::PROP_NAME );
+		// TODO: Remove when we bump requirements
+		if ( method_exists( MediaWikiServices::class, 'getPageProps' ) ) {
+			// PMediaWikiServices::getPageProps is avaliable since MW 1.36
+			return MediaWikiServices::getInstance()->getPageProps()->getProperties( $title, self::PROP_NAME );
+		} else {
+			// PageProps::getInstance is deprecated in MW 1.38
+			return PageProps::getInstance()->getProperties( $title, self::PROP_NAME );
+		}
 	}
 
 	/**
