@@ -39,6 +39,9 @@
 	"ExtensionMessagesFiles": {
 		"ShortDescriptionMagic": "ShortDescription.i18n.magic.php"
 	},
+	"TrackingCategories": [
+		"shortdescription-category"
+	],
 	"Hooks": {
 		"ApiOpenSearchSuggest": "api",
 		"BeforePageDisplay": "page",

@@ -6,5 +6,6 @@
 	},
 	"shortdescription": "ShortDescription",
 	"shortdescription-desc": "Allows wikis to add short descriptions to wikitext pages",
-	"shortdescription-info-label": "Short description"
+	"shortdescription-info-label": "Short description",
+	"shortdescription-category": "Pages with short description"
 }

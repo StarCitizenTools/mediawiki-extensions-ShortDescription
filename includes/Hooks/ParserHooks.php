@@ -169,6 +169,7 @@ class ParserHooks implements
 				// ParserOutput::setProperty is deprecated in MW 1.38
 				$parserOutput->setProperty( 'shortdesc', $shortDesc );
 			}
+			$parser->addTrackingCategory( 'shortdescription-category' );
 		}
 	}
 }
