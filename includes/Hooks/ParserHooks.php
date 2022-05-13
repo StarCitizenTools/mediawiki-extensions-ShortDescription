@@ -31,7 +31,7 @@ class ParserHooks implements
 		// TODO: Remove when we bump requirements
 		if ( method_exists( ParserOutput::class, 'getPageProperty' ) ) {
 			// ParserOutput::getPageProperty is avaliable since MW 1.38
-			$shortDesc = $parserOutput-> getPageProperty( 'shortdesc' );
+			$shortDesc = $parserOutput->getPageProperty( 'shortdesc' );
 		} else {
 			// ParserOutput::getProperty is deprecated in MW 1.38
 			$shortDesc = $parserOutput->getProperty( 'shortdesc' );
