@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Bo77le",
 			"Tranve",
 			"Zhang8569"
 		]
 	},
 	"shortdescription": "简介",
 	"shortdescription-desc": "允许wikis为wikitext页面添加简介",
-	"shortdescription-info-label": "简介"
+	"shortdescription-info-label": "简介",
+	"shortdescription-category": "简短描述页"
 }

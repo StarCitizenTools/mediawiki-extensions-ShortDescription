@@ -7,5 +7,6 @@
 	},
 	"shortdescription": "ShortDescription",
 	"shortdescription-desc": "Permet aux wikis d’ajouter des descriptions courtes aux pages en wikicode",
-	"shortdescription-info-label": "Description courte"
+	"shortdescription-info-label": "Description courte",
+	"shortdescription-category": "Pages avec une description courte"
 }

@@ -6,5 +6,6 @@
 	},
 	"shortdescription": "Краток опис",
 	"shortdescription-desc": "Им овозможува на викијата да ставаат кратки описи на страници со викитекст",
-	"shortdescription-info-label": "Краток опис"
+	"shortdescription-info-label": "Краток опис",
+	"shortdescription-category": "Страници без краток опис"
 }
