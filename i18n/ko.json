@@ -7,5 +7,6 @@
 	},
 	"shortdescription": "짧은설명",
 	"shortdescription-desc": "위키텍스트 문서에 짧은 설명을 추가할 수 있도록 합니다",
-	"shortdescription-info-label": "짧은 설명"
+	"shortdescription-info-label": "짧은 설명",
+	"shortdescription-category": "짧은 설명이 있는 문서"
 }
