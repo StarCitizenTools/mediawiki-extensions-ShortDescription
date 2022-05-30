@@ -2,10 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"DDPAT",
-			"Ice bulldog"
+			"Ice bulldog",
+			"Ата"
 		]
 	},
 	"shortdescription": "ShortDescription",
 	"shortdescription-desc": "Дозволяє вікі додавати короткі описи до сторінок вікітексту",
-	"shortdescription-info-label": "Короткий опис"
+	"shortdescription-info-label": "Короткий опис",
+	"shortdescription-category": "Сторінки з коротким описом"
 }
