@@ -8,5 +8,6 @@
 	},
 	"shortdescription": "ShortDescription",
 	"shortdescription-desc": "允許 wiki 添加簡短描述到 wikitext 頁面",
-	"shortdescription-info-label": "簡短描述"
+	"shortdescription-info-label": "簡短描述",
+	"shortdescription-category": "簡短描述的頁面"
 }
