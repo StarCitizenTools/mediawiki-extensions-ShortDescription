@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu"
+		]
+	},
+	"shortdescription": "DescriçãoBreve",
+	"shortdescription-desc": "Permite que as wikis adicionem descrições breves às páginas de texto wiki",
+	"shortdescription-info-label": "Descrição breve",
+	"shortdescription-category": "Páginas com descrição breve"
+}
