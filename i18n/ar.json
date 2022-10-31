@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Asma",
+			"Meno25"
+		]
+	},
+	"shortdescription": "وصف قصير",
+	"shortdescription-desc": "يسمح للويكي بإضافة أوصاف قصيرة لصفحات نصوص ويكي",
+	"shortdescription-info-label": "وصف قصير",
+	"shortdescription-category": "صفحات مع وصف قصير"
+}
