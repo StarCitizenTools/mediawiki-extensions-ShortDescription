@@ -109,7 +109,7 @@ class ParserHooks implements
 	 * @return string
 	 */
 	public static function handle( Parser $parser, $shortDesc ) {
-		$handler = self::newFromGlobalState();
+		$handler = self::factory();
 		$handler->doHandle( $parser, $shortDesc );
 		return '';
 	}
@@ -117,7 +117,7 @@ class ParserHooks implements
 	/**
 	 * @return self
 	 */
-	private static function newFromGlobalState() {
+	private static function factory() {
 		return new self();
 	}
 
