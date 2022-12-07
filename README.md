@@ -38,7 +38,7 @@ The config flags allow more customization on the specific features in the extens
 Name | Description | Values | Default
 :--- | :--- | :--- | :---
 `$wgShortDescriptionEnableTagline` | Enables short descritption in site tagline | `true` - enable; `false` - disable | `true`
-`$ShortDescriptionExtendOpenSearchXml` | Provide short description to the Opensearch API module | `true` - enable; `false` - disable | `false`
+`$wgShortDescriptionExtendOpenSearchXml` | Provide short description to the Opensearch API module | `true` - enable; `false` - disable | `false`
 
 ## Usage
 ### Add short description 
