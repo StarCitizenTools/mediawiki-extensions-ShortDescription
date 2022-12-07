@@ -1,13 +1,13 @@
 function main() {
 	var shortdesc = mw.config.get( 'wgShortDesc' ),
-		tagline;
+		contentSub;
 
 	if ( shortdesc ) {
-		tagline = document.getElementById( 'siteSub' );
+		contentSub = document.getElementById( 'contentSub' );
 		// Wikipedia uses shortdescription class
 		// Added for gadgets and extension compatibility
-		tagline.classList.add( 'ext-shortdesc', 'shortdescription' );
-		tagline.innerHTML = mw.html.escape( shortdesc );
+		contentSub.classList.add( 'ext-shortdesc', 'shortdescription' );
+		contentSub.innerHTML = mw.html.escape( shortdesc );
 	}
 }
 
