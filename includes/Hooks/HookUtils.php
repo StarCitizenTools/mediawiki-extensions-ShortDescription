@@ -62,7 +62,7 @@ class HookUtils {
 	 * @param Title $title
 	 * @return bool
 	 */
-	public static function isAvailableForTitle( $title ) : bool {
+	public static function isAvailableForTitle( $title ): bool {
 		// Only wikitext pages
 		if ( $title->getContentModel() !== CONTENT_MODEL_WIKITEXT ) {
 			return false;

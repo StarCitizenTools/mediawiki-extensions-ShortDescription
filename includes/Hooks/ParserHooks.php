@@ -27,7 +27,7 @@ class ParserHooks implements
 	 * @param OutputPage $out
 	 * @param ParserOutput $parserOutput ParserOutput instance being added in $out
 	 */
-	public function onOutputPageParserOutput( $out, $parserOutput ) : void {
+	public function onOutputPageParserOutput( $out, $parserOutput ): void {
 		// TODO: Remove when we bump requirements
 		if ( method_exists( ParserOutput::class, 'getPageProperty' ) ) {
 			// ParserOutput::getPageProperty is avaliable since MW 1.38

@@ -25,7 +25,7 @@ class PageHooks implements BeforePageDisplayHook {
 	 * @param OutputPage $out OutputPage
 	 * @param Skin $skin
 	 */
-	public function onBeforePageDisplay( $out, $skin ) : void {
+	public function onBeforePageDisplay( $out, $skin ): void {
 		$title = $out->getTitle();
 
 		// Return if tagline is not enabled
