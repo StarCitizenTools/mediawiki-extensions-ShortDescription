@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"apihelp-query+description-summary": "Pridobi kratek opis oz. podnaslov, ki razloži, o čem govori ciljna stran.",
+	"apihelp-query+description-example": "Pridobitev opisa za stran »London«."
+}

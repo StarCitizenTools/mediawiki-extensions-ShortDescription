@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Afalau"
+		]
+	},
+	"apihelp-query+description-summary": "Cael disgrifiad byr neu is-deitl sy'n disgrifio'r dudalen darged.",
+	"apihelp-query+description-example": "Cael disgrifiad am y dudalen 'Caerdydd'."
+}
