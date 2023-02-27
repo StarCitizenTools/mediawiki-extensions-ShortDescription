@@ -2,9 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"McDutchie",
+			"Verdy p",
 			"Wladek92"
 		]
 	},
-	"apihelp-query+description-summary": "Obtenir une brève description, alias sous-titre, expliquant de quoi parle la page cible.",
-	"apihelp-query+description-example": "Obtenir la description de la page 'London'."
+	"apihelp-query+description-summary": "Obtenir une brève description, ou sous-titre, expliquant de quoi parle la page cible.",
+	"apihelp-query+description-example": "Obtenir la description de la page « London »."
 }
