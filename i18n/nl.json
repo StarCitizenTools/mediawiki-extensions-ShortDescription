@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mainframe98"
+		]
+	},
+	"shortdescription-desc": "Voegt de mogelijkheid toe om korte beschrijvingen toe te kunnen voegen aan wikitekstpagina's",
+	"shortdescription-info-label": "Korte beschrijving",
+	"shortdescription-category": "Pagina's met korte beschrijving"
+}
