@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Rail"
+		]
+	},
+	"shortdescription-desc": "Umożliwia wiki dodawanie krótkich opisów do artykułów",
+	"shortdescription-info-label": "Krótki opis",
+	"shortdescription-category": "Strony z krótkim opisem"
+}
