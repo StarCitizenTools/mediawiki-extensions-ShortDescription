@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"shortdescription-desc": "Lar wikier legge til korte beskrivelser av wikitekstsider",
+	"shortdescription-info-label": "Kort beskrivelse",
+	"shortdescription-category": "Sider med kort beskrivelse"
+}
