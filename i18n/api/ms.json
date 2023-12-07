@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hakimi97"
+		]
+	},
+	"apihelp-query+description-summary": "Dapatkan penerangan ringkas yakni sari kata yang menerangkan tentang halaman sasaran.",
+	"apihelp-query+description-example": "Dapatkan penerangan untuk halaman 'London'."
+}
