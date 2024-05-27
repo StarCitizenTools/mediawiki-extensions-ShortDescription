@@ -1,5 +1,5 @@
 {
-	"name": "mediawiki/short-description",
+	"name": "starcitizentools/short-description",
 	"type": "mediawiki-extension",
 	"description": "Adds the required magic word and API to mimic the short description provided by Wikibase on Wikimedia projects",
 	"keywords": [
