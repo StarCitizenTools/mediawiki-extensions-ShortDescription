@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
-	"shortdescription-desc": "ERlaabt et Wikien fir kuerz Beschreiwungen fir Wikitext Säiten derbäizesetzen",
-	"shortdescription-info-label": "Kuerz Beschreiwung",
-	"shortdescription-category": "Säiten ouni kuerz Beschreiwung"
+	"shortdescription-desc": "Erlaabt et Wikie fir Kuerzbschreiwungen op Wikitext-Säiten derbäizesetzen",
+	"shortdescription-info-label": "Kuerzbeschreiwung",
+	"shortdescription-category": "Säiten ouni Kuerzbeschreiwung"
 }
