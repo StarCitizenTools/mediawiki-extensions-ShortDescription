@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"apihelp-query+description-summary": "Een korte beschrijving opvragen, ook wel ondertitel genoemd, waarin wordt uitgelegd waar de doelpagina over gaat.",
+	"apihelp-query+description-example": "Vraag de beschrijving op voor de pagina ‘London’."
+}
