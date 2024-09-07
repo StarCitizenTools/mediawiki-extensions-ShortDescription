@@ -10,7 +10,6 @@
 namespace MediaWiki\Extension\ShortDescription\Hooks;
 
 use MediaWiki\MediaWikiServices;
-use PageProps;
 
 class HookUtils {
 
