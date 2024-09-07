@@ -1,32 +1,32 @@
-name: MediaWiki CI
+name: Lint
 
 on:
   push:
     branches:
-      - '**'
+      - "**"
+      - "!**dependabot/**"
+      - "!**release-please--**"
   pull_request:
     branches:
-      - '**'
+      - "**"
+      - "!**dependabot/**"
+      - "!**release-please--**"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test:
     name: Lint
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        php-versions: ['7.4']
-    steps:
-    - name: Cancel Previous Runs
-      uses: styfle/cancel-workflow-action@0.11.0
-      with:
-        access_token: ${{ github.token }}
-  
+    steps:  
     - uses: actions/checkout@v4
       with:
         fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
 
     - name: Cache dependencies
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: /home/runner/cache
         key: ${{ runner.os }}-${{ hashFiles('**/*.lock') }}
@@ -40,7 +40,7 @@ jobs:
     # Check for changed files 
     - name: Check for PHP changes
       id: changed-php
-      uses: tj-actions/changed-files@v37
+      uses: tj-actions/changed-files@v45
       with:
         since_last_remote_commit: "true"
         files: |
@@ -48,24 +48,24 @@ jobs:
 
     - name: Check for script changes
       id: changed-script
-      uses: tj-actions/changed-files@v37
+      uses: tj-actions/changed-files@v45
       with:
         since_last_remote_commit: "true"
         files: |
-          modules/**/*.js
+          resources/**/*.js
 
     - name: Check for stylesheet changes
       id: changed-stylesheet
-      uses: tj-actions/changed-files@v37
+      uses: tj-actions/changed-files@v45
       with:
         since_last_remote_commit: "true"
         files: |
-          modules/**/*.css
-          modules/**/*.less
+          resources/**/*.css
+          resources/**/*.less
     
     - name: Check for i18n changes
       id: changed-i18n
-      uses: tj-actions/changed-files@v37
+      uses: tj-actions/changed-files@v45
       with:
         since_last_remote_commit: "true"
         files: |
