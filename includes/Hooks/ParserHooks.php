@@ -13,9 +13,9 @@ namespace MediaWiki\Extension\ShortDescription\Hooks;
 
 use MediaWiki\Hook\OutputPageParserOutputHook;
 use MediaWiki\Hook\ParserFirstCallInitHook;
+use MediaWiki\Title\Title;
 use Parser;
 use ParserOutput;
-use Title;
 
 class ParserHooks implements
 	OutputPageParserOutputHook,

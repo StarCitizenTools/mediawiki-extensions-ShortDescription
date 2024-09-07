@@ -12,8 +12,8 @@ declare( strict_types=1 );
 
 namespace MediaWiki\Extension\ShortDescription\Hooks;
 
+use MediaWiki\Title\Title;
 use MediaWiki\Rest\Hook\SearchResultProvideDescriptionHook;
-use Title;
 
 class RestHooks implements SearchResultProvideDescriptionHook {
 
