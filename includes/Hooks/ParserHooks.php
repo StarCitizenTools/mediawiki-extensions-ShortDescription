@@ -28,14 +28,7 @@ class ParserHooks implements
 	 * @param ParserOutput $parserOutput ParserOutput instance being added in $out
 	 */
 	public function onOutputPageParserOutput( $out, $parserOutput ): void {
-		// TODO: Remove when we bump requirements
-		if ( method_exists( ParserOutput::class, 'getPageProperty' ) ) {
-			// ParserOutput::getPageProperty is avaliable since MW 1.38
-			$shortDesc = $parserOutput->getPageProperty( 'shortdesc' );
-		} else {
-			// ParserOutput::getProperty is deprecated in MW 1.38
-			$shortDesc = $parserOutput->getProperty( 'shortdesc' );
-		}
+		$shortDesc = $parserOutput->getPageProperty( 'shortdesc' );
 
 		// Return if tagline is not enabled
 		if ( !HookUtils::getConfig( 'ShortDescriptionEnableTagline' ) ) {
@@ -171,14 +164,7 @@ class ParserHooks implements
 		$shortDesc = $this->sanitize( $shortDesc );
 		if ( $this->isValid( $shortDesc ) ) {
 			$parserOutput = $parser->getOutput();
-			// TODO: Remove when we bump requirements
-			if ( method_exists( ParserOutput::class, 'setPageProperty' ) ) {
-				// ParserOutput::setPageProperty is avaliable since MW 1.38
-				$parserOutput->setPageProperty( 'shortdesc', $shortDesc );
-			} else {
-				// ParserOutput::setProperty is deprecated in MW 1.38
-				$parserOutput->setProperty( 'shortdesc', $shortDesc );
-			}
+			$parserOutput->setPageProperty( 'shortdesc', $shortDesc );
 			$parser->addTrackingCategory( 'shortdescription-category' );
 		}
 	}
