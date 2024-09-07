@@ -52,7 +52,7 @@ jobs:
       with:
         since_last_remote_commit: "true"
         files: |
-          resources/**/*.js
+          modules/**/*.js
 
     - name: Check for stylesheet changes
       id: changed-stylesheet
@@ -60,8 +60,8 @@ jobs:
       with:
         since_last_remote_commit: "true"
         files: |
-          resources/**/*.css
-          resources/**/*.less
+          modules/**/*.css
+          modules/**/*.less
     
     - name: Check for i18n changes
       id: changed-i18n
