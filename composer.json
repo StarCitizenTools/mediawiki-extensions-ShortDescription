@@ -43,6 +43,9 @@
 		],
 		"phan": "phan -d . --long-progress-bar"
 	},
+	"extra": {
+		"installer-name": "ShortDescription"
+	},
 	"config": {
 		"allow-plugins": {
 			"composer/installers": true,
