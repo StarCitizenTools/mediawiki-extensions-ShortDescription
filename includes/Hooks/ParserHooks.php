@@ -79,6 +79,12 @@ class ParserHooks implements
 			$title = $parser->getTitle();
 		}
 
+		// Bail if the title cannot be parsed
+		// See https://issue-tracker.miraheze.org/T13055
+		if ( $title === null ) {
+			return $output;
+		}
+
 		// Check if shortdesc exists, render if exist
 		$shortDesc = HookUtils::getShortDescription( $title );
 		if ( $shortDesc !== false ) {
