@@ -10,7 +10,7 @@
 	},
 	"devDependencies": {
 		"eslint-config-wikimedia": "0.28.2",
-		"eslint-plugin-no-jquery": "3.0.2",
+		"eslint-plugin-no-jquery": "3.1.0",
 		"grunt-banana-checker": "0.13.0",
 		"stylelint-config-idiomatic-order": "10.0.0",
 		"stylelint-config-wikimedia": "0.18.0"
