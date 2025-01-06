@@ -4,6 +4,7 @@ namespace MediaWiki\Extension\ShortDescription;
 
 use ApiQuery;
 use ApiQueryBase;
+use MediaWiki\Title\Title;
 
 /**
  * Extracted from WikiBase
@@ -39,7 +40,11 @@ class ApiQueryDescription extends ApiQueryBase {
 	public function execute() {
 		$continue = $this->getParameter( 'continue' );
 
-		$titlesByPageId = $this->getPageSet()->getGoodTitles();
+		$pages = $this->getPageSet()->getGoodPages();
+		$titlesByPageId = [];
+		foreach ( $pages as $pageId => $title ) {
+			$titlesByPageId[$pageId] = Title::newFromPageIdentity( $title );
+		}
 		// Just in case we are dealing with titles from some very fast generator,
 		// apply some limits as a sanity check.
 		$limit = $this->getMain()->canApiHighLimits() ? self::LIMIT_BIG2 : self::LIMIT_BIG1;
