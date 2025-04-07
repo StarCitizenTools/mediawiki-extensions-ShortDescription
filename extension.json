@@ -27,7 +27,10 @@
 			"scripts": [
 				"ext.shortDescription.js"
 			],
-			"styles": "ext.shortDescription.less"
+			"styles": "ext.shortDescription.less",
+			"dependencies": [
+				"mediawiki.util"
+			]
 		}
 	},
 	"AutoloadNamespaces": {
