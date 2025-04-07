@@ -2,9 +2,10 @@
 
 namespace MediaWiki\Extension\ShortDescription;
 
-use ApiQuery;
-use ApiQueryBase;
+use MediaWiki\Api\ApiQuery;
+use MediaWiki\Api\ApiQueryBase;
 use MediaWiki\Title\Title;
+use Wikimedia\ParamValidator\ParamValidator;
 
 /**
  * Extracted from WikiBase
@@ -100,8 +101,8 @@ class ApiQueryDescription extends ApiQueryBase {
 		return [
 			'continue' => [
 				self::PARAM_HELP_MSG => 'api-help-param-continue',
-				self::PARAM_TYPE => 'integer',
-				self::PARAM_DFLT => 0,
+				ParamValidator::PARAM_TYPE => 'integer',
+				ParamValidator::PARAM_DEFAULT => 0,
 			],
 		];
 	}

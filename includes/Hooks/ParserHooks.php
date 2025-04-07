@@ -11,11 +11,11 @@ declare( strict_types=1 );
 
 namespace MediaWiki\Extension\ShortDescription\Hooks;
 
-use MediaWiki\Hook\OutputPageParserOutputHook;
 use MediaWiki\Hook\ParserFirstCallInitHook;
+use MediaWiki\Output\Hook\OutputPageParserOutputHook;
+use MediaWiki\Parser\Parser;
+use MediaWiki\Parser\ParserOutput;
 use MediaWiki\Title\Title;
-use Parser;
-use ParserOutput;
 
 class ParserHooks implements
 	OutputPageParserOutputHook,

@@ -11,10 +11,10 @@ declare( strict_types=1 );
 
 namespace MediaWiki\Extension\ShortDescription\Hooks;
 
-use ApiBase;
-use ApiMain;
-use FauxRequest;
+use MediaWiki\Api\ApiBase;
+use MediaWiki\Api\ApiMain;
 use MediaWiki\Api\Hook\ApiOpenSearchSuggestHook;
+use MediaWiki\Request\FauxRequest;
 
 class ApiHooks implements ApiOpenSearchSuggestHook {
 
