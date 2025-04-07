@@ -76,7 +76,7 @@ class ParserHooks implements
 		if ( $input ) {
 			$title = Title::newFromText( $input );
 		} else {
-			$title = $parser->getTitle();
+			$title = $parser->getPage();
 		}
 
 		// Bail if the title cannot be parsed
