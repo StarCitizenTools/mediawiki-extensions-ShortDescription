@@ -18,7 +18,7 @@ The ShortDescription extension allows wikis to add short descriptions to wikitex
 * Provide description for extensions such as MobileFrontend, RelatedArticles
 
 ## Requirements
-* [MediaWiki](https://www.mediawiki.org) 1.35 or later
+* [MediaWiki](https://www.mediawiki.org) 1.43 or later
 
 ## Installation
 You can get the extension via Git (specifying ShortDescription as the destination directory):

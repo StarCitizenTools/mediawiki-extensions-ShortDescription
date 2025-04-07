@@ -1,7 +1,7 @@
 {
 	"name": "ShortDescription",
 	"license-name": "GPL-3.0-or-later",
-	"version": "3.0.1",
+	"version": "4.0.0",
 	"url": "https://www.mediawiki.org/wiki/Extension:ShortDescription",
 	"author": [
 		"alistair3149"
@@ -10,7 +10,7 @@
 	"descriptionmsg": "shortdescription-desc",
 	"type": "api",
 	"requires": {
-		"MediaWiki": ">= 1.39.4"
+		"MediaWiki": ">= 1.43.0"
 	},
 	"MessagesDirs": {
 		"ShortDescription": [
