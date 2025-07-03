@@ -5,7 +5,7 @@ function main() {
 		return;
 	}
 
-	mw.util.addSubtitle( shortdesc );
+	mw.util.addSubtitle( mw.html.escape( shortdesc ) );
 }
 
 main();
