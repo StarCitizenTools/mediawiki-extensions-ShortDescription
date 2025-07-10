@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Lorem Ipsum"
+			"Lorem Ipsum",
+			"PretzelRocky"
 		]
 	},
-	"shortdescription-info-label": "Kurze Beschreibung"
+	"shortdescription-info-label": "Kurze Beschreibung",
+	"shortdescription-category": "Seiten mit kurzer Beschreibung"
 }
