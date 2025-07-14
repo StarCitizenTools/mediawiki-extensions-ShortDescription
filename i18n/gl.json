@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"shortdescription-desc": "Permite que os wikis engadan descricións curtas ás páxinas de texto wiki",
+	"shortdescription-info-label": "Descrición curta",
+	"shortdescription-category": "Páxinas cunha descrición curta"
+}

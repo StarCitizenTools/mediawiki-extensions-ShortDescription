@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"apihelp-query+description-summary": "Obter unha breve descrición; isto é, un subtítulo que explica o tema que trata a páxina de destino.",
+	"apihelp-query+description-example": "Obter a descrición da páxina «London»."
+}
