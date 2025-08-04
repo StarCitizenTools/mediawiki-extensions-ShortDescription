@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Darafsh",
 			"Ladsgroup"
 		]
 	},
-	"apihelp-query+description-example": "گرفتن توضیحات برای صفحه «London»"
+	"apihelp-query+description-summary": "یک توصیف کوتاه یا زیرعنوان دریافت کنید که بیان کند صفحهٔ هدف دربارهٔ چیست",
+	"apihelp-query+description-example": "دریافت توصیف برای صفحهٔ «لندن»"
 }
