@@ -81,7 +81,7 @@
 		}
 	},
 	"ConfigRegistry": {
-		"shortdescription": "GlobalVarConfig::newInstance"
+		"shortdescription": "MediaWiki\\Config\\GlobalVarConfig::newInstance"
 	},
 	"manifest_version": 2
 }
