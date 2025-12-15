@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jp2593"
+		]
+	},
+	"apihelp-query+description-summary": "Magkua nin halipot na deskripsyon a.k.a. subtitulo na nagpapaliwanag kun ano an manungod sa target na pahina.",
+	"apihelp-query+description-example": "Kuanon an deskripsyon para sa pahinang 'London'."
+}
