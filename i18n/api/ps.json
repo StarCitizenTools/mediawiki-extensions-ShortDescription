@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"شاه زمان پټان"
+		]
+	},
+	"apihelp-query+description-summary": "د هغه اړوند څنگ‌سرليک لنډ څرگنداوی ترلاسه کول چې د موخې وړ مخ تشريح کوي.",
+	"apihelp-query+description-example": "د 'لندن' مخ څرگنداوی ترلاسه کول."
+}
