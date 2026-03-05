@@ -145,11 +145,10 @@ class ParserHooks implements
 	 * @return string Plaintext of description.
 	 */
 	public function sanitize( $shortDesc ) {
+		// Unescape first so strip_tags() can see and remove real HTML tags
+		$shortDesc = html_entity_decode( $shortDesc, ENT_QUOTES, 'utf-8' );
 		// Remove accidental formatting - descriptions are plaintext.
 		$shortDesc = strip_tags( $shortDesc );
-		// Unescape - clients are not necessarily HTML-based and using HTML tags as part of
-		// the descript (i.e. with <nowiki> or such) should be possible.
-		$shortDesc = html_entity_decode( $shortDesc, ENT_QUOTES, 'utf-8' );
 		// Remove newlines, tabs and other weird whitespace
 		$shortDesc = preg_replace( '/\s+/', ' ', $shortDesc );
 		// Get rid of leading/trailing space - no valid usecase for it, easy for it to go unnoticed
