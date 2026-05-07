@@ -11,6 +11,7 @@ declare( strict_types=1 );
 
 namespace MediaWiki\Extension\ShortDescription\Hooks;
 
+use MediaWiki\Context\IContextSource;
 use MediaWiki\Hook\InfoActionHook;
 
 class ActionsHooks implements InfoActionHook {

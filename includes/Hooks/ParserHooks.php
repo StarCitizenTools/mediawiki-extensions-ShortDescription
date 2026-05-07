@@ -13,6 +13,7 @@ namespace MediaWiki\Extension\ShortDescription\Hooks;
 
 use MediaWiki\Hook\ParserFirstCallInitHook;
 use MediaWiki\Output\Hook\OutputPageParserOutputHook;
+use MediaWiki\Output\OutputPage;
 use MediaWiki\Parser\Parser;
 use MediaWiki\Parser\ParserOutput;
 use MediaWiki\Title\Title;

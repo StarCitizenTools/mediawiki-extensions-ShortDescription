@@ -10,6 +10,7 @@
 namespace MediaWiki\Extension\ShortDescription\Hooks;
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 
 class HookUtils {
 
@@ -20,7 +21,7 @@ class HookUtils {
 
 	/**
 	 * Returns pageprops array for short description
-	 * @param Title $title Title to get short description for
+	 * @param Title|Title[] $title Title (or array of page ID => Title) to get short description for
 	 * @return array PageProps for short description
 	 */
 	public static function getPageProps( $title ) {

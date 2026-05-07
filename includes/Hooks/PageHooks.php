@@ -12,6 +12,8 @@ declare( strict_types=1 );
 namespace MediaWiki\Extension\ShortDescription\Hooks;
 
 use MediaWiki\Hook\BeforePageDisplayHook;
+use MediaWiki\Output\OutputPage;
+use Skin;
 
 class PageHooks implements BeforePageDisplayHook {
 
