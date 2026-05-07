@@ -19,12 +19,13 @@ use MediaWiki\Request\FauxRequest;
 class ApiHooks implements ApiOpenSearchSuggestHook {
 
 	/**
-	 * ApiOpenSearchSuggest hook handler
+	 * ApiOpenSearchSuggest hook handler.
+	 *
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ApiOpenSearchSuggest
 	 *
-	 * @param array &$results Array of search results
+	 * @param array<int,array<string,mixed>> &$results Array of search results, keyed by page ID.
 	 */
-	public function onApiOpenSearchSuggest( &$results ) {
+	public function onApiOpenSearchSuggest( &$results ): void {
 		if ( !HookUtils::getConfig( 'ShortDescriptionExtendOpenSearchXml' ) || !count( $results ) ) {
 			return;
 		}
@@ -51,7 +52,5 @@ class ApiHooks implements ApiOpenSearchSuggestHook {
 				$results[$id]['extract trimmed'] = false;
 			}
 		}
-
-		$pageIds = array_keys( $results );
 	}
 }

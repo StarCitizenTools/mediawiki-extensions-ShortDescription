@@ -17,17 +17,16 @@ use MediaWiki\Hook\InfoActionHook;
 class ActionsHooks implements InfoActionHook {
 
 	/**
-	 * InfoAction hook handler, adds the short description to the info=action page
+	 * InfoAction hook handler, adds the short description to the info=action page.
 	 *
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/InfoAction
 	 *
-	 * @param IContextSource $context Context, used to extract the title of the page
-	 * @param array[] &$pageInfo Auxillary information about the page.
+	 * @param IContextSource $context
+	 * @param array[] &$pageInfo Auxiliary information about the page.
 	 */
-	public function onInfoAction( $context, &$pageInfo ) {
+	public function onInfoAction( $context, &$pageInfo ): void {
 		$shortdesc = HookUtils::getShortDescription( $context->getTitle() );
 		if ( !$shortdesc ) {
-			// The page has no short description
 			return;
 		}
 

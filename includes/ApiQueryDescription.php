@@ -1,5 +1,7 @@
 <?php
 
+declare( strict_types=1 );
+
 namespace MediaWiki\Extension\ShortDescription;
 
 use MediaWiki\Api\ApiQuery;
@@ -24,28 +26,22 @@ use Wikimedia\ParamValidator\ParamValidator;
  */
 class ApiQueryDescription extends ApiQueryBase {
 
-	/**
-	 * @param ApiQuery $query
-	 * @param string $moduleName
-	 */
-	public function __construct(
-		ApiQuery $query,
-		$moduleName
-	) {
+	public function __construct( ApiQuery $query, string $moduleName ) {
 		parent::__construct( $query, $moduleName, 'desc' );
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function execute() {
-		$continue = $this->getParameter( 'continue' );
+	public function execute(): void {
+		$continue = (int)$this->getParameter( 'continue' );
 
 		$pages = $this->getPageSet()->getGoodPages();
 		$titlesByPageId = [];
 		foreach ( $pages as $pageId => $title ) {
 			$titlesByPageId[$pageId] = Title::newFromPageIdentity( $title );
 		}
+
 		// Just in case we are dealing with titles from some very fast generator,
 		// apply some limits as a sanity check.
 		$limit = $this->getMain()->canApiHighLimits() ? self::LIMIT_BIG2 : self::LIMIT_BIG1;
@@ -56,29 +52,28 @@ class ApiQueryDescription extends ApiQueryBase {
 
 		$descriptionsByPageId = Hooks\HookUtils::getDescriptionsByPageId( $titlesByPageId );
 
-		$this->addDataToResponse( array_keys( $titlesByPageId ),
-			$descriptionsByPageId, $continue );
+		$this->addDataToResponse( array_keys( $titlesByPageId ), $descriptionsByPageId, $continue );
 	}
 
 	/**
 	 * @param int[] $pageIds Page IDs, in the same order as returned by the ApiPageSet.
-	 * @param string[] $descriptionsByPageId Descriptions from wikitext, as an
-	 *   associative array of page ID
+	 * @param string[] $descriptionsByPageId Descriptions keyed by page ID.
 	 * @param int $continue The API request is being continued from this position.
 	 */
 	private function addDataToResponse(
 		array $pageIds,
 		array $descriptionsByPageId,
-		$continue
-	) {
+		int $continue
+	): void {
 		$result = $this->getResult();
 		$i = 0;
-		$fit = true;
 		foreach ( $pageIds as $pageId ) {
-			$path = [ 'query', 'pages', $pageId ];
-			if ( array_key_exists( $pageId, $descriptionsByPageId ) ) {
-				$fit = $result->addValue( $path, 'description', $descriptionsByPageId[$pageId] );
+			if ( !array_key_exists( $pageId, $descriptionsByPageId ) ) {
+				$i++;
+				continue;
 			}
+			$path = [ 'query', 'pages', $pageId ];
+			$fit = $result->addValue( $path, 'description', $descriptionsByPageId[$pageId] );
 			if ( !$fit ) {
 				$this->setContinueEnumParameter( 'continue', $continue + $i );
 				break;
@@ -90,14 +85,14 @@ class ApiQueryDescription extends ApiQueryBase {
 	/**
 	 * @inheritDoc
 	 */
-	public function getCacheMode( $params ) {
+	public function getCacheMode( $params ): string {
 		return 'public';
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	protected function getAllowedParams() {
+	protected function getAllowedParams(): array {
 		return [
 			'continue' => [
 				self::PARAM_HELP_MSG => 'api-help-param-continue',
@@ -110,11 +105,10 @@ class ApiQueryDescription extends ApiQueryBase {
 	/**
 	 * @inheritDoc
 	 */
-	protected function getExamplesMessages() {
+	protected function getExamplesMessages(): array {
 		return [
 			'action=query&prop=description&titles=London'
-			=> 'apihelp-query+description-example',
+				=> 'apihelp-query+description-example',
 		];
 	}
-
 }
