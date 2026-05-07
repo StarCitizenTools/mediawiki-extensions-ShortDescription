@@ -23,27 +23,26 @@ class PageHooks implements BeforePageDisplayHook {
 	private const NATIVE_SKINS = [ 'citizen', 'minerva' ];
 
 	/**
-	 * Add the required javascript to replace the tagline with shortdesc
-	 * @param OutputPage $out OutputPage
+	 * Add the required JavaScript to replace the tagline with the short description.
+	 *
+	 * @param OutputPage $out
 	 * @param Skin $skin
 	 */
 	public function onBeforePageDisplay( $out, $skin ): void {
-		$title = $out->getTitle();
-
-		// Return if tagline is not enabled
 		if ( !HookUtils::getConfig( 'ShortDescriptionEnableTagline' ) ) {
 			return;
 		}
 
-		// Load module if the page is suitable
-		if ( HookUtils::isAvailableForTitle( $title ) ) {
-			// Load module if the skin has no native support
-			if ( !in_array( $skin->getSkinName(), self::NATIVE_SKINS ) ) {
-				$out->addJsConfigVars( 'wgShortDesc', HookUtils::getShortDescription( $title ) );
-				$out->addModules( [
-					'ext.shortDescription'
-				] );
-			}
+		$title = $out->getTitle();
+		if ( !HookUtils::isAvailableForTitle( $title ) ) {
+			return;
 		}
+
+		if ( in_array( $skin->getSkinName(), self::NATIVE_SKINS, true ) ) {
+			return;
+		}
+
+		$out->addJsConfigVars( 'wgShortDesc', HookUtils::getShortDescription( $title ) );
+		$out->addModules( [ 'ext.shortDescription' ] );
 	}
 }
