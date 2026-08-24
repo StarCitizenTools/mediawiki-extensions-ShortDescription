@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"apihelp-query+description-summary": "Získať krátky opis (podnadpis) vysvetľujúci, o čom je cieľová stránka.",
+	"apihelp-query+description-example": "Získať opis stránky „London“."
+}

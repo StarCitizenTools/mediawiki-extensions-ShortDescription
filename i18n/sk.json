@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"shortdescription-desc": "Umožňuje wiki pridávať krátke opisy k wikitextovým stránkam",
+	"shortdescription-info-label": "Krátky opis",
+	"shortdescription-category": "Stránky s krátkym opisom"
+}
