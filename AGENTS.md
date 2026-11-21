@@ -2,7 +2,7 @@
 
 ## Overview
 
-ShortDescription is a MediaWiki extension (requires MW 1.43+) that adds a `{{SHORTDESC:...}}` magic word and exposes the stored description through hooks (`OutputPageParserOutput`, `BeforePageDisplay`, `InfoAction`, `SearchResultProvideDescription`) and an API module (`prop=description`). It can also feed OpenSearch suggestions and render the description as a site tagline. PHP for parsing/storage and the API, vanilla JS + LESS for the optional tagline rendering via ResourceLoader.
+ShortDescription is a MediaWiki extension (requires MW 1.43+) that adds a `{{SHORTDESC:...}}` magic word and exposes the stored description through hooks (`OutputPageParserOutput`, `BeforePageDisplay`, `InfoAction`, `SearchResultProvideDescription`) and an API module (`prop=description`). It can also feed OpenSearch suggestions and add the description to the page subtitle. Everything is PHP; the only Node tooling is the i18n linter.
 
 ## Verification
 
@@ -11,11 +11,9 @@ Run only what's relevant to the files you changed.
 | Files changed | Command |
 | --- | --- |
 | `*.php` | `composer preflight` (lint, style, and Phan) |
-| `*.js` | `npm run lint:js` |
-| `*.less`, `*.css` | `npm run lint:styles` |
 | `i18n/` | `npm run lint:i18n` |
 
-Auto-fix commands: `composer fix` (PHP), `npm run lint:fix:js` (JS), `npm run lint:fix:styles` (styles).
+Auto-fix command: `composer fix` (PHP).
 
 **Preflight**: Run `npm run preflight` to execute all Node-based lints in one command. Run `composer preflight` in the [dev environment](#dev-environment) to execute all PHP lints, style checks, and Phan static analysis.
 
@@ -42,21 +40,14 @@ Whichever you use, it needs what CI's PHP jobs get (`.github/workflows/ci.yml`):
 - Always use MediaWiki-namespaced imports (`use MediaWiki\Title\Title;`), never legacy shims (`use Title;`)
 - Hook handlers live under `includes/Hooks/` and are wired through `HookHandlers` in `extension.json`
 
-### JavaScript
+### HTML output
 
-- CommonJS modules: `require()` for imports, `module.exports` for exports
-- Client code lives in `modules/`
-
-### LESS/CSS
-
-- Styles live in `modules/`
-- Class names follow the `ext-shortdesc` prefix pattern (enforced by `.stylelintrc.json`)
+- CSS classes the extension outputs use the `ext-shortdesc` prefix
 
 ### extension.json
 
-`extension.json` is the source of truth for how the extension is wired — ResourceLoader modules, hooks, config variables, API modules, and dependencies are all declared here.
+`extension.json` is the source of truth for how the extension is wired — hooks, config variables, API modules, and dependencies are all declared here.
 
-- When adding or removing files under `modules/`, update the corresponding `scripts` or `styles` list in `ResourceModules`
 - Config variables are declared under `config` in `extension.json` (prefixed `wgShortDescription`)
 - New hooks must be registered under both `Hooks` and `HookHandlers`
 
