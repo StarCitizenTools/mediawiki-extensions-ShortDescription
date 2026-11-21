@@ -18,21 +18,6 @@
 			"i18n/api"
 		]
 	},
-	"ResourceFileModulePaths": {
-		"localBasePath": "modules",
-		"remoteExtPath": "ShortDescription/modules"
-	},
-	"ResourceModules": {
-		"ext.shortDescription": {
-			"scripts": [
-				"ext.shortDescription.js"
-			],
-			"styles": "ext.shortDescription.less",
-			"dependencies": [
-				"mediawiki.util"
-			]
-		}
-	},
 	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\ShortDescription\\": "includes/"
 	},
@@ -73,7 +58,7 @@
 	"config": {
 		"ShortDescriptionEnableTagline": {
 			"value": true,
-			"description": "Enable short description in site tagline."
+			"description": "Show the short description in the page subtitle."
 		},
 		"ShortDescriptionExtendOpenSearchXml": {
 			"value": false,

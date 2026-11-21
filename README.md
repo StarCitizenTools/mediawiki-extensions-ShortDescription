@@ -2,15 +2,15 @@
 # ShortDescription
 ![](https://github.com/StarCitizenTools/mediawiki-extensions-ShortDescription/workflows/MediaWiki%20CI/badge.svg)
 
-The ShortDescription extension allows wikis to add short descriptions to wikitext pages, simliar to the implementation on [Wikipedia](https://en.wikipedia.org/wiki/Wikipedia:Short_description) and Wikibase. On top of that, it replaces the site tagline with short description on pages with short description.
+The ShortDescription extension allows wikis to add short descriptions to wikitext pages, simliar to the implementation on [Wikipedia](https://en.wikipedia.org/wiki/Wikipedia:Short_description) and Wikibase. On top of that, it shows the short description underneath the page title.
 
 [Extension:ShortDescription on MediaWiki](https://www.mediawiki.org/wiki/Extension:ShortDescription).
 
 ## Features
 * Define short description on the page with the magic word `{{SHORTDESC}}`, same as the implementation on Wikipedia
 * Retrieve short description on any wiki pages with the magic word `{{GETSHORTDESC}}`
-* Add short description underneath the page title on most skins, if the skin supports site tagline (`#siteSub`)
-  * Note that the short description with replace the default site tagline message on pages with short description
+* Add short description underneath the page title, in the page subtitle (`#contentSub`)
+  * The short description is wrapped in `<span class="ext-shortdesc shortdescription">`, so it can be targeted by CSS and gadgets
   * Does not apply to [Skin:Citizen](https://www.mediawiki.org/wiki/Skin:Citizen) and [Skin:Minerva Neue](https://www.mediawiki.org/wiki/Skin:Minerva_Neue), as they have native support
 * Allow short description to be accessed through the Action API
 * Provide description to the REST API search endpoint
@@ -37,7 +37,7 @@ The config flags allow more customization on the specific features in the extens
 
 Name | Description | Values | Default
 :--- | :--- | :--- | :---
-`$wgShortDescriptionEnableTagline` | Enables short descritption in site tagline | `true` - enable; `false` - disable | `true`
+`$wgShortDescriptionEnableTagline` | Shows the short description in the page subtitle | `true` - enable; `false` - disable | `true`
 `$wgShortDescriptionExtendOpenSearchXml` | Provide short description to the Opensearch API module | `true` - enable; `false` - disable | `false`
 
 ## Usage
