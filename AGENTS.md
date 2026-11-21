@@ -56,6 +56,13 @@ Whichever you use, it needs what CI's PHP jobs get (`.github/workflows/ci.yml`):
 - Use [Conventional Commits](https://www.conventionalcommits.org/) (e.g. `fix:`, `feat:`, `refactor:`)
 - Use `ci:` or `chore:` for non-user-facing changes (tooling, config, dependencies)
 
+### Releases
+
+- [release-please](https://github.com/googleapis/release-please) cuts releases from the Conventional Commits on `main`. It opens a `build: release X.Y.Z` PR that bumps `version` in `extension.json` and updates `CHANGELOG.md`, and merging that PR tags and publishes the release.
+- Don't bump the version or edit `CHANGELOG.md` by hand.
+- The commit type picks the version bump: `feat:` gives a minor release, `!` or a `BREAKING CHANGE:` footer a major one, and anything else that's releasable a patch one.
+- Releasable types are `feat:`, `fix:`, `perf:`, `revert:` and `chore:` (the `php` release type lists chores in the changelog). `ci:`, `build:`, `docs:`, `refactor:`, `style:` and `test:` commits don't trigger a release, which covers Dependabot's `build(deps)` updates.
+
 ### i18n
 
 - Any user-facing string needs a message key in `i18n/en.json` (or `i18n/api/en.json` for API-only messages)
