@@ -12,6 +12,7 @@ declare( strict_types=1 );
 namespace MediaWiki\Extension\ShortDescription\Hooks;
 
 use MediaWiki\Hook\BeforePageDisplayHook;
+use MediaWiki\Html\Html;
 use MediaWiki\Output\OutputPage;
 use Skin;
 
@@ -23,7 +24,7 @@ class PageHooks implements BeforePageDisplayHook {
 	private const NATIVE_SKINS = [ 'citizen', 'minerva' ];
 
 	/**
-	 * Add the required JavaScript to replace the tagline with the short description.
+	 * Add the short description to the page subtitle.
 	 *
 	 * @param OutputPage $out
 	 * @param Skin $skin
@@ -42,7 +43,13 @@ class PageHooks implements BeforePageDisplayHook {
 			return;
 		}
 
-		$out->addJsConfigVars( 'wgShortDesc', HookUtils::getShortDescription( $title ) );
-		$out->addModules( [ 'ext.shortDescription' ] );
+		// The subtitle container carries the user language, but the description is page content
+		$pageLang = $title->getPageLanguage();
+		$out->addSubtitle( Html::element( 'span', [
+			// Wikipedia uses the shortdescription class, kept for gadget compatibility
+			'class' => 'ext-shortdesc shortdescription',
+			'lang' => $pageLang->getHtmlCode(),
+			'dir' => $pageLang->getDir(),
+		], HookUtils::getShortDescription( $title ) ) );
 	}
 }
